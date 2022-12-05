@@ -18,7 +18,9 @@ public class Hasiru_Animation : MonoBehaviour
     {
 
         //2022/11/23追加 ゲーム開始判定
-        if (isStart == false && Input.GetKey(KeyCode.Return))
+        //2022/11/23追加 ゲーム開始判定 全てのキー対応
+        if (isStart == false && Input.anyKey)
+            //Input.GetKey(KeyCode.Return))
         {
             isStart = true;
         }

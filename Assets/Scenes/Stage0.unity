@@ -667,8 +667,8 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1568067355}
-  m_VersionIndex: 636
+  m_Mesh: {fileID: 1584425897}
+  m_VersionIndex: 639
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -735,7 +735,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337823042}
-  m_Mesh: {fileID: 1568067355}
+  m_Mesh: {fileID: 1584425897}
 --- !u!4 &337823047
 Transform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1568067355}
+  m_Mesh: {fileID: 1584425897}
 --- !u!114 &337823049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40094
+  m_Name: pb_Mesh47828
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1561,7 +1561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33904
+  m_Name: pb_Mesh47776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1770,7 +1770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Enter \u3067\u8A66\u9A13\u958B\u59CB\uFF01"
+  m_Text: "\u30AD\u30FC\u3092\u62BC\u3057\u3066\n\u8A66\u9A13\u958B\u59CB\uFF01"
 --- !u!222 &954622047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2063,13 +2063,13 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
---- !u!43 &1568067355
+--- !u!43 &1584425897
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33878
+  m_Name: pb_Mesh47750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

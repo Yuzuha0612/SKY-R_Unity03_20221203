@@ -21,7 +21,8 @@ public class Walkiy_ver3 : MonoBehaviour
     void Update()
     {
         //2022/11/27追加 ゲーム開始判定
-        if (isStart == false && Input.GetKey(KeyCode.Return))
+        //2022/11/23追加 ゲーム開始判定 全てのキー対応
+        if (isStart == false && Input.anyKey)
         {
             isStart = true;
         }
