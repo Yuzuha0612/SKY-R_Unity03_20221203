@@ -17,6 +17,9 @@ public class EndGame_Button : MonoBehaviour
     [SerializeField] Button EndGameButton;
     [SerializeField] Image EndGameImage;
     [SerializeField] Text EndGameText;
+    //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンをGameStartとしてFirstGameStartButtonに入れる
+    [SerializeField] Button FirstGameStartButton;
+    //
     public void OnEndGameFirstButtonClicked()
     {//最初にゲーム終了ボタンを押すとゲーム終了警告画面が表示される
         EndGameWarningImage.enabled = true;
@@ -27,6 +30,8 @@ public class EndGame_Button : MonoBehaviour
         EndGameButton.enabled = true;
         EndGameImage.enabled = true;
         EndGameText.enabled = true;
+        //2022/12/5追加　ボタンをキー選択させるため、いいえボタンを選択する
+        EndGameWarningCloseButton.Select();
     }
 
     public void OnEndGameSecondButtonOffClicked()
@@ -47,5 +52,7 @@ public class EndGame_Button : MonoBehaviour
         EndGameButton.enabled = false;
         EndGameImage.enabled = false;
         EndGameText.enabled = false;
+        //2022/12/5追加　ボタンをキー選択させるため、試験開始ボタンを選択する
+        FirstGameStartButton.Select();
     }
 }

@@ -15,6 +15,8 @@ public class OperationSelect : MonoBehaviour
     [SerializeField] RawImage ExplanationMovieJump;
     [SerializeField] Text ExplanationTextWalk;
     [SerializeField] Text ExplanationTextJump;
+    //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンをGameStartとしてFirstGameStartButtonに入れる
+    [SerializeField] Button FirstGameStartButton;
     public void OnOperationExplanationButtonClicked()
     {//操作説明ボタンを押すと操作説明画像が表示される
         ExplanationImage.enabled = true;
@@ -24,6 +26,8 @@ public class OperationSelect : MonoBehaviour
         ExplanationMovieJump.enabled = true;
         ExplanationTextWalk.enabled = true;
         ExplanationTextJump.enabled = true;
+        //2022/12/5追加　ボタンをキー選択させるため、×ボタンを選択する
+        ExplanationCloseButton.Select();
     }
 
     public void OnOperationExplanationButtonOffClicked()
@@ -35,6 +39,8 @@ public class OperationSelect : MonoBehaviour
         ExplanationMovieJump.enabled = false;
         ExplanationTextWalk.enabled = false;
         ExplanationTextJump.enabled = false;
+        //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンを指示する
+        FirstGameStartButton.Select();
     }
 
     public void OnOperationExplanationButtonAndFirstStageClicked()
@@ -47,6 +53,8 @@ public class OperationSelect : MonoBehaviour
         ExplanationMovieJump.enabled = true;
         ExplanationTextWalk.enabled = true;
         ExplanationTextJump.enabled = true;
+        //2022/12/5追加　ボタンをキー選択させるため、×ボタンを選択する
+        ExplanationCloseAndFirstStageButton.Select();
     }
     public void OnOperationExplanationButtonOffAndFirstStageClicked()
     {//×ボタンを押すと操作説明画像が非表示にされる
