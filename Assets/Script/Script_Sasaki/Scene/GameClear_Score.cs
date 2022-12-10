@@ -14,6 +14,8 @@ public class GameClear_Score : MonoBehaviour
     [SerializeField] Button NextStageButton;
     [SerializeField] Text NextStageText;
     public Text TimeLeftLabel;
+    //2022年12月11日最終ステージだけキー操作を行うための透明ボタン
+    [SerializeField] Button FirstSelectButton;
     void Start()
     {
         NextStageImage.enabled = true;
@@ -49,12 +51,13 @@ public class GameClear_Score : MonoBehaviour
         //NextStageに1を足す
         NextStage++;
         //最後のステージの場合
-        //もし「STAGE」が7ならボタンを非表示にさせる
+        //2022年12月11日もし「STAGE」が7ならボタンを非表示にさせ、透明ボタンを有効にする
         if (NextStage == 7)
         {
             NextStageImage.enabled = false;
             NextStageButton.enabled = false;
             NextStageText.enabled = false;
+            FirstSelectButton.enabled = true;
         }
     }
     public void OnReturnTitleClearButtonClicked()
