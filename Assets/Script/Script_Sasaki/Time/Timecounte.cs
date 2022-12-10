@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Timecounte : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Timecounte : MonoBehaviour
     public GameObject GoalObject;
     public GameObject GameOverArea;
     public GameObject Sabodon;
+    //2022年12月9日追加　時間停止エフェクトを取得するため、MainCameraをTimeStopPostProcessLayerに入れる
+    public PostProcessLayer TimeStopPostProcessLayer;
     void Start()
     {
         timeCount = 10;
@@ -25,6 +28,8 @@ public class Timecounte : MonoBehaviour
         GoalObject = GameObject.FindGameObjectWithTag("Goal");
         GameOverArea = GameObject.FindGameObjectWithTag("GameOverArea");
         Sabodon = GameObject.FindGameObjectWithTag("TogeToge");
+        //2022年12月9日追加　時間停止エフェクトをオフにする
+        TimeStopPostProcessLayer.enabled = false;
     }
 
     void Update()
@@ -39,16 +44,26 @@ public class Timecounte : MonoBehaviour
         }
         if (isStart == true)
         {
-            //左右キーのどちらかが押されたとき時間を引くのを止めるそれ以外はTimedeltaTimeで時間経過
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) && Sabodon.GetComponent<Sabodon>().isTogeDamege)
+            //左右キーのどちらかが押されたとき時間を引くのを止めるそれ以外はTimedeltaTimeで時間経過 && Sabodon.GetComponent<Sabodon>().isTogeDamege
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
             {
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
+                //2022年12月9日追加　時間停止エフェクトをオンにする
+                TimeStopPostProcessLayer.enabled = true;
             }
             else 
             {
                 timeCount -= Time.deltaTime;
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
+                //2022年12月9日追加　時間停止エフェクトをオフにする
+                TimeStopPostProcessLayer.enabled = false;
             }
+        }
+        if (timeCount < 4)
+        {//2022/12/11追加　残り4秒になったら制限時間を赤色にする
+         //4秒以下になったら
+         //赤色にする
+            timeLabel.color = new Color(1.0f, 0.0f ,0.0f ,1.0f);
         }
         if (timeCount < 0)
         {//2022/11/27追加　ゲームオーバーから現在のステージに戻ってくる

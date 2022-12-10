@@ -52,7 +52,7 @@ public class Walkiy_ver3 : MonoBehaviour
             transform.position = pos;
             if (pos.x > lastposition)
             {
-                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+                this.transform.rotation = Quaternion.Euler(0, 120, 0);
                 isStop = true;
             }
         }
@@ -63,7 +63,7 @@ public class Walkiy_ver3 : MonoBehaviour
             transform.position = pos;
             if (pos.x < startposition)
             {
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                this.transform.rotation = Quaternion.Euler(0, 30, 0);
                 isStop = false;
             }
         }
