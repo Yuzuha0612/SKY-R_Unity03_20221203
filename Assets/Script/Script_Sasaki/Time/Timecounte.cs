@@ -18,7 +18,7 @@ public class Timecounte : MonoBehaviour
     [SerializeField] Text StartClickEnter;
     public GameObject GoalObject;
     public GameObject GameOverArea;
-    public GameObject Sabodon;
+    //public GameObject Sabodon;
     //2022年12月9日追加　時間停止エフェクトを取得するため、MainCameraをTimeStopPostProcessLayerに入れる
     public PostProcessLayer TimeStopPostProcessLayer;
     void Start()
@@ -27,7 +27,7 @@ public class Timecounte : MonoBehaviour
         timeLabel.text = "TIME:" + timeCount; //fixapdate
         GoalObject = GameObject.FindGameObjectWithTag("Goal");
         GameOverArea = GameObject.FindGameObjectWithTag("GameOverArea");
-        Sabodon = GameObject.FindGameObjectWithTag("TogeToge");
+        //Sabodon = GameObject.FindGameObjectWithTag("TogeToge");
         //2022年12月9日追加　時間停止エフェクトをオフにする
         TimeStopPostProcessLayer.enabled = false;
     }
@@ -45,18 +45,24 @@ public class Timecounte : MonoBehaviour
         if (isStart == true)
         {
             //左右キーのどちらかが押されたとき時間を引くのを止めるそれ以外はTimedeltaTimeで時間経過 && Sabodon.GetComponent<Sabodon>().isTogeDamege
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)) &&(Sabodon. instance.isTogeDamege))
             {
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
                 //2022年12月9日追加　時間停止エフェクトをオンにする
                 TimeStopPostProcessLayer.enabled = true;
             }
-            else 
+            else
             {
                 timeCount -= Time.deltaTime;
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
                 //2022年12月9日追加　時間停止エフェクトをオフにする
                 TimeStopPostProcessLayer.enabled = false;
+            }
+            //2022年12月9日追加　キーを押したらペナルティとして0.1秒減らす
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                timeLabel.text = "TIME:" + timeCount.ToString("0.00");
+                timeCount -= 0.1f;
             }
         }
         if (timeCount < 4)
@@ -111,5 +117,6 @@ public class Timecounte : MonoBehaviour
         //ゲームオーバー画面に移動
         SceneManager.LoadScene("GameOver");
     }
+   
 
 }
