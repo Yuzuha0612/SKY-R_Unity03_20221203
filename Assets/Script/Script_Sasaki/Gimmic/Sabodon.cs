@@ -7,7 +7,15 @@ public class Sabodon : MonoBehaviour
 	[SerializeField]
 	[Tooltip("ƒL[“ü—Í‚ğ–³Œø‚É‚·‚é•b”")]
 	private float disableKeyInputSeconds;
+	public static Sabodon instance;
 	public bool isTogeDamege;
+	public void Awake()
+	{
+		if (instance == null)
+		{
+			instance = this;
+		}
+	}
 	void Start()
 	{
 		isTogeDamege = true;

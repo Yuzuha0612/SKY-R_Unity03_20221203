@@ -1236,6 +1236,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 906431899}
+--- !u!1 &503804128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8724447520470211051, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+  m_PrefabInstance: {fileID: 8724447521372184314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &503804129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503804128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd5067beac83054b891ff1c2bca231a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableKeyInputSeconds: 0
+  isTogeDamege: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1988,6 @@ MonoBehaviour:
   StartClickEnter: {fileID: 954622046}
   GoalObject: {fileID: 131855071}
   GameOverArea: {fileID: 737251549}
-  Sabodon: {fileID: 0}
   TimeStopPostProcessLayer: {fileID: 963194231}
 --- !u!82 &963194230
 AudioSource:
@@ -2966,6 +2984,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8724447520470211043, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8724447520470211051, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
       propertyPath: m_Name
       value: Hasiaru
