@@ -10,8 +10,8 @@ public class Dossun_Move : MonoBehaviour
     public float FallDossunSpeed;
     public float ReloadDossunSpeed;
     //2022/12/10 ƒhƒbƒXƒ“—Ž‚¿‚é‚Æ‚«‚ÌŠç
-    public float TuraraFaceDown;
-    public float TuraraFaceUp;
+    public GameObject TuraraFaceDown;
+    public GameObject TuraraFaceUp;
 
     private Vector3 Dossunpos;
     public bool isStopAbilityDossun;
@@ -58,19 +58,24 @@ public class Dossun_Move : MonoBehaviour
         {
             Dossunpos.y += Time.deltaTime * ReloadDossunSpeed;
             transform.position = Dossunpos;
+            TuraraFaceDown.SetActive(false);
+            TuraraFaceUp.SetActive(true);
             if (Dossunpos.y > startDossunposition)
             {
                 isStop = true;
-               // TuraraFaceDown.SetActive(true);
+                
             }
         }
         else if (isStop == true)
         {
             Dossunpos.y -= Time.deltaTime * FallDossunSpeed;
             transform.position = Dossunpos;
+            TuraraFaceDown.SetActive(true);
+            TuraraFaceUp.SetActive(false);
             if (Dossunpos.y < lastDossunposition)
             {
                 isStop = false;
+               
             }
         }
     }
