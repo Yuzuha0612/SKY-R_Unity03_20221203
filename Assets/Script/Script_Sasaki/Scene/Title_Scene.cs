@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Title_Scene : MonoBehaviour
 {
@@ -16,6 +17,19 @@ public class Title_Scene : MonoBehaviour
     [SerializeField] Text ReturnText;
     //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンををGameStartとしてFirstGameStartButtonに入れる
     [SerializeField] Button FirstGameStartButton;
+
+   void Start()
+    {
+        //「STAGE」というキーで保存されているInt値を読み込み
+        int StageReload = PlayerPrefs.GetInt("STAGE");
+        //もし「STAGE」が1以上なら試験選択ボタンを白色にする
+        if (StageReload > 0)
+        {
+            StageSelectImage.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+
+    }
+
     public void OnStartButtonClicked()
     {//試験開始ボタンを押すと最初から始めるボタンとステージ選択ボタン、戻るボタンが表示される
         StageSelectImage.enabled = true;
@@ -43,6 +57,14 @@ public class Title_Scene : MonoBehaviour
         ReturnText.enabled = false;
         FirstGameStartButton.Select();
     }
-
-
+    public void OnStageSelectButtonClicked()
+    {
+        //「STAGE」というキーで保存されているInt値を読み込み
+        int StageReload = PlayerPrefs.GetInt("STAGE");
+        //もし「STAGE」が1以上なら試験選択画面に移行
+        if (StageReload > 0)
+        {
+            SceneManager.LoadScene("StageSelect");
+        }
+    }
 }
