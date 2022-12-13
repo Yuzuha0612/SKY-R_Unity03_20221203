@@ -11,11 +11,16 @@ public class TeamLogo_Title : MonoBehaviour
     public GameObject panel;          //フェードアウト用パネルUIオブジェクト
     private Image image;              //panelのコンポーネント
     private Color color;              //panelのカラー設定
+  //2022/12/13追加　ステージ番号初期化
+    public int StageNumber;
     void Start()
     {
         //フェードアウト用のパラメータ取得
         image = panel.GetComponent<Image>();
         color = image.color;
+        //「STAGE」というキーで、Int値の「StageNumber」を保存
+        PlayerPrefs.SetInt("STAGE", StageNumber);
+        PlayerPrefs.Save();
     }
 
     void Update()
