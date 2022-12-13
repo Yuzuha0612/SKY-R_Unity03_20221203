@@ -1440,7 +1440,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -170, y: 130}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 550, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &534537835
 VideoPlayer:
@@ -1450,7 +1450,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534537833}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 841c2982672db524e976c20796299e77, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5b871df3aff9db2438468f3fa52621f1, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1689,7 +1689,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 00fb5b1720e43f743b3193ee9b74dc04, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2025,10 +2025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 674979858}
+    m_SelectOnDown: {fileID: 674979858}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -2073,7 +2073,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 91f899c9502cdd348b7c48a1cc9714fd, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0abbe42b9585ede4b83cf5ef9853d7e9, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3431,7 +3431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: 100}
+  m_AnchoredPosition: {x: 420, y: 100}
   m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460417569
@@ -3467,7 +3467,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79FB\u52D5\n\u5DE6\u53F3\u77E2\u5370\u30AD\u30FC"
+  m_Text: "\u79FB\u52D5\uFF06\u6642\u9593\u505C\u6B62\n\u5DE6\u53F3\u77E2\u5370\u30AD\u30FC"
 --- !u!222 &1460417570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3675,8 +3675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: -150}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchoredPosition: {x: 180, y: -136}
+  m_SizeDelta: {x: 550, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1576055992
 VideoPlayer:
@@ -3686,7 +3686,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576055990}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a6fc1eb56b30dec43a74a106f8d605a0, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: fac6ecaf8e9ec9142b2e548d8921e0c2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -4601,10 +4601,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2139208871}
+    m_SelectOnDown: {fileID: 2139208871}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -4649,7 +4649,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 91f899c9502cdd348b7c48a1cc9714fd, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0abbe42b9585ede4b83cf5ef9853d7e9, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
