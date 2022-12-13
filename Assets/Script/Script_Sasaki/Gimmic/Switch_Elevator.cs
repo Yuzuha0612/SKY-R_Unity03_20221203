@@ -8,9 +8,13 @@ public class Switch_Elevator : MonoBehaviour
     public GameObject Elevator01;
     public GameObject Elevator02;
     public bool isElevatorSwitch;
+    public GameObject SwitchGraphic;
+    public GameObject SwitchDownGraphic;
     void Start()
     {
         isElevatorSwitch = false;
+        SwitchDownGraphic.SetActive(false);
+        SwitchGraphic.SetActive(true);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,7 +26,8 @@ public class Switch_Elevator : MonoBehaviour
             Elevator01.gameObject.SetActive(false);
             Elevator02.gameObject.SetActive(true);
             isElevatorSwitch = true;
-
+            SwitchGraphic.SetActive(false);
+            SwitchDownGraphic.SetActive(true);
         }
     }
 }

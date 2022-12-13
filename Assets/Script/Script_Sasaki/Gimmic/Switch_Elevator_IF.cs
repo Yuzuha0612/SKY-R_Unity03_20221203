@@ -7,6 +7,7 @@ public class Switch_Elevator_IF : MonoBehaviour
     public Collider Elevator02Collider;
     public MeshRenderer Elevator02Mesh;
     public GameObject ElevatorSwitchObject;
+    public GameObject ElevatorGraphic;
     void Start()
     {
         ElevatorSwitchObject = GameObject.FindGameObjectWithTag("ElevatorSwitch");
@@ -14,6 +15,7 @@ public class Switch_Elevator_IF : MonoBehaviour
          Elevator02Collider.enabled = false;
         Elevator02Mesh = GetComponent<MeshRenderer>();
         Elevator02Mesh.enabled = false;
+        ElevatorGraphic.SetActive(false);
     }
     void Update()
     {
@@ -27,5 +29,6 @@ private void ElevatorSwitching()
     {
         Elevator02Collider.enabled = true;
         Elevator02Mesh.enabled = true;
+        ElevatorGraphic.SetActive(true);
     }
 }
