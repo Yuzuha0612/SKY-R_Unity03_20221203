@@ -13,6 +13,7 @@ public class TeamLogo_Title : MonoBehaviour
     private Color color;              //panelのカラー設定
   //2022/12/13追加　ステージ番号初期化
     public int StageNumber;
+
     void Start()
     {
         //フェードアウト用のパラメータ取得

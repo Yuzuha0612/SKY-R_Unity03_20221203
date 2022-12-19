@@ -17,6 +17,10 @@ public class OperationSelect : MonoBehaviour
     [SerializeField] Text ExplanationTextJump;
     //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンをGameStartとしてFirstGameStartButtonに入れる
     [SerializeField] Button FirstGameStartButton;
+   
+    void Start()
+    {
+    }
     public void OnOperationExplanationButtonClicked()
     {//操作説明ボタンを押すと操作説明画像が表示される
         ExplanationImage.enabled = true;
@@ -57,7 +61,8 @@ public class OperationSelect : MonoBehaviour
         ExplanationCloseAndFirstStageButton.Select();
     }
     public void OnOperationExplanationButtonOffAndFirstStageClicked()
-    {//×ボタンを押すと操作説明画像が非表示にされる
+    {
+        //×ボタンを押すと操作説明画像が非表示にされる
         //最初のステージに進む
         ExplanationImage.enabled = false;
         ExplanationCloseButton.enabled = false;
@@ -67,6 +72,9 @@ public class OperationSelect : MonoBehaviour
         ExplanationMovieJump.enabled = false;
         ExplanationTextWalk.enabled = false;
         ExplanationTextJump.enabled = false;
-        SceneManager.LoadScene("Stage0");
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+       FadeManager.Instance.LoadScene("Stage0",0.5f);
     }
-}
+   
+    }
+

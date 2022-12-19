@@ -23,8 +23,10 @@ public class SceneSelect : MonoBehaviour
     {
         //ボタンをキー選択させるため、7級ボタンを選択する
         Stage0Button.Select();
-        //「STAGE」というキーで保存されているInt値を読み込み
-        int StageReload = PlayerPrefs.GetInt("STAGE");
+        //2022/12/19キー名を変更「STAGECLEAR」というキーで保存されているInt値を読み込み
+        // int StageReload = PlayerPrefs.GetInt("STAGECLEAR");
+        //ベータ版用、全てのステージを表示させる
+        int StageReload = 6;
         //もし「STAGE」が0ならStage0までのボタンを有効
         if (StageReload == 0)
         {
@@ -102,41 +104,54 @@ public class SceneSelect : MonoBehaviour
    
    
 public void OnStageSelectButtonClicked()
-    {
-        SceneManager.LoadScene("StageSelect");
+    {  //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("StageSelect", 0.5f);
     }
 
     public void OnStageSelect00ButtonClicked()
     {//Stage0移動ボタン
-        SceneManager.LoadScene("Stage0");
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage0", 0.5f);
     }
 
     public void OnStageSelect01ButtonClicked()
     {//Stage1移動ボタン
-        SceneManager.LoadScene("Stage1");
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage1", 0.5f);
     }
 
     public void OnStageSelect02ButtonClicked()
     {//Stage2_takeda移動ボタン
-        SceneManager.LoadScene("Stage2_takeda");
+     //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage2_takeda", 0.5f);
     }
 
     public void OnStageSelect03ButtonClicked()
     {//Stage2_takeda移動ボタン
-        SceneManager.LoadScene("Stage3_miura");
+     //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage3_miura", 0.5f);
     }
     public void OnStageSelect04ButtonClicked()
     {//Stage2_takeda移動ボタン
-        SceneManager.LoadScene("Stage4_miura");
+     //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage4_miura", 0.5f);
     }
 
     public void OnStageSelect05ButtonClicked()
     {//Stage5_takeda移動ボタン
-        SceneManager.LoadScene("Stage5_takeda");
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage5_takeda", 0.5f);
     }
 
     public void OnStageSelect06ButtonClicked()
     {//Stage6_takeda移動ボタン
-        SceneManager.LoadScene("Stage6_takeda");
+     //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("Stage6_takeda", 0.5f);
+    }
+
+    public void OnTitleReturnButtonClicked()
+    {
+        //2022/12/19　タイトルに戻る
+        FadeManager.Instance.LoadScene("Title", 0.5f);
     }
 }
