@@ -78,7 +78,8 @@ public class Timecounte : MonoBehaviour
             PlayerPrefs.SetInt("STAGE", StageNumber);
             PlayerPrefs.Save();
             //ゲームオーバー画面に移動
-            SceneManager.LoadScene("GameOver");
+            //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+            FadeManager.Instance.LoadScene("GameOver", 0.3f);
         }
 
         if (GoalObject.GetComponent<Goal_GameClear>().isGameClear)
@@ -114,8 +115,8 @@ public class Timecounte : MonoBehaviour
         //「STAGE」というキーで、Int値の「StageNumber」を保存
         PlayerPrefs.SetInt("STAGE", StageNumber);
         PlayerPrefs.Save();
-        //ゲームオーバー画面に移動
-        SceneManager.LoadScene("GameOver");
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("GameOver", 0.3f);
     }
    
 

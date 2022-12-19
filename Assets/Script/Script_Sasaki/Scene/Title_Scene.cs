@@ -17,8 +17,9 @@ public class Title_Scene : MonoBehaviour
     [SerializeField] Text ReturnText;
     //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンををGameStartとしてFirstGameStartButtonに入れる
     [SerializeField] Button FirstGameStartButton;
+    
 
-   void Start()
+    void Start()
     {
         //「STAGE」というキーで保存されているInt値を読み込み
         int StageReload = PlayerPrefs.GetInt("STAGE");
@@ -27,7 +28,7 @@ public class Title_Scene : MonoBehaviour
         {
             StageSelectImage.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         }
-
+      
     }
 
     public void OnStartButtonClicked()
@@ -42,7 +43,7 @@ public class Title_Scene : MonoBehaviour
         ReturnImage.enabled = true;
         ReturnText.enabled = true;
         //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンを指示する
-        StageSelectButton.Select();
+        FirstStageButton.Select();
     }
     public void OnReturnButtonClicked()
     {//戻るボタンを押すと最初から始めるボタンとステージ選択ボタン、戻るボタンが非表示にされる
@@ -64,7 +65,8 @@ public class Title_Scene : MonoBehaviour
         //もし「STAGE」が1以上なら試験選択画面に移行
         if (StageReload > 0)
         {
-            SceneManager.LoadScene("StageSelect");
+            //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+            FadeManager.Instance.LoadScene("StageSelect", 0.5f);
         }
     }
 }
