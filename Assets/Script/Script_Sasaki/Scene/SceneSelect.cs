@@ -24,9 +24,9 @@ public class SceneSelect : MonoBehaviour
         //ボタンをキー選択させるため、7級ボタンを選択する
         Stage0Button.Select();
         //2022/12/19キー名を変更「STAGECLEAR」というキーで保存されているInt値を読み込み
-        // int StageReload = PlayerPrefs.GetInt("STAGECLEAR");
+         int StageReload = PlayerPrefs.GetInt("CLEARSTAGE");
         //ベータ版用、全てのステージを表示させる
-        int StageReload = 6;
+       // int StageReload = 6;
         //もし「STAGE」が0ならStage0までのボタンを有効
         if (StageReload == 0)
         {
