@@ -21,8 +21,11 @@ public class Timecounte : MonoBehaviour
     //public GameObject Sabodon;
     //2022年12月9日追加　時間停止エフェクトを取得するため、MainCameraをTimeStopPostProcessLayerに入れる
     public PostProcessLayer TimeStopPostProcessLayer;
+    public AudioClip GameOverSE;//落ちるときの効果音
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         timeCount = 10;
         timeLabel.text = "TIME:" + timeCount; //fixapdate
         GoalObject = GameObject.FindGameObjectWithTag("Goal");
@@ -112,11 +115,12 @@ public class Timecounte : MonoBehaviour
     }
     private void GameOver_Drop()
     {
+        audioSource.PlayOneShot(GameOverSE);//ゲームオーバー効果音
         //「STAGE」というキーで、Int値の「StageNumber」を保存
         PlayerPrefs.SetInt("STAGE", StageNumber);
         PlayerPrefs.Save();
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
-        FadeManager.Instance.LoadScene("GameOver", 0.3f);
+        FadeManager.Instance.LoadScene("GameOver", 0.6f);
     }
    
 

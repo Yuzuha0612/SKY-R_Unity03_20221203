@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class GameOver_Drop : MonoBehaviour
 {
+
+    public AudioClip GameOverDropSE;//落ちるときの効果音
+    AudioSource audioSource;
     public bool isGameOver;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         isGameOver = false;
     }
     //ゴールにぶつかったらゴールシーンに移動する
@@ -16,6 +20,7 @@ public class GameOver_Drop : MonoBehaviour
         //TimeCountのGameOver_Timeを実行するため、isGameOverをtrueにする
         if (collision.gameObject.tag == "Hasiru")
         {
+            audioSource.PlayOneShot(GameOverDropSE);//ゲームオーバー効果音
             isGameOver = true;
         }
     }

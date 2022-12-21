@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOver_Scene : MonoBehaviour
 {
+    void Start()
+    {
+       
+    }
     public void OnTitleReloadButtonClicked()
     {
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
@@ -13,6 +17,7 @@ public class GameOver_Scene : MonoBehaviour
     }
     public void OnRetryButtonClicked()
     {
+       
         //「STAGE」というキーで保存されているInt値を読み込み
         int StageReload = PlayerPrefs.GetInt("STAGE");
         //もし「STAGE」が0ならStage0に移動する
