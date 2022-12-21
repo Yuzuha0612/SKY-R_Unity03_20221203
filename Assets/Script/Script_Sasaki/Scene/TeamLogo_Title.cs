@@ -20,7 +20,7 @@ public class TeamLogo_Title : MonoBehaviour
         image = panel.GetComponent<Image>();
         color = image.color;
         //「STAGE」というキーで、Int値の「StageNumber」を保存
-        PlayerPrefs.SetInt("STAGE", StageNumber);
+        PlayerPrefs.SetInt("CLEARSTAGE", StageNumber);
         PlayerPrefs.Save();
     }
 

@@ -551,6 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTime: 2
   panel: {fileID: 356118604}
+  StageNumber: -1
 --- !u!4 &1355061476
 Transform:
   m_ObjectHideFlags: 0

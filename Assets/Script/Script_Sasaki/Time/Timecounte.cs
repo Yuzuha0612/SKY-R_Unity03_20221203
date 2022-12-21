@@ -76,13 +76,14 @@ public class Timecounte : MonoBehaviour
         }
         if (timeCount < 0)
         {//2022/11/27追加　ゲームオーバーから現在のステージに戻ってくる
-            //0秒以下になったら
+         //0秒以下になったら
+            audioSource.PlayOneShot(GameOverSE);//ゲームオーバー効果音
             //「STAGE」というキーで、Int値の「StageNumber」を保存
             PlayerPrefs.SetInt("STAGE", StageNumber);
             PlayerPrefs.Save();
             //ゲームオーバー画面に移動
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
-            FadeManager.Instance.LoadScene("GameOver", 0.3f);
+            FadeManager.Instance.LoadScene("GameOver", 0.5f);
         }
 
         if (GoalObject.GetComponent<Goal_GameClear>().isGameClear)
@@ -115,7 +116,7 @@ public class Timecounte : MonoBehaviour
     }
     private void GameOver_Drop()
     {
-        audioSource.PlayOneShot(GameOverSE);//ゲームオーバー効果音
+       
         //「STAGE」というキーで、Int値の「StageNumber」を保存
         PlayerPrefs.SetInt("STAGE", StageNumber);
         PlayerPrefs.Save();
