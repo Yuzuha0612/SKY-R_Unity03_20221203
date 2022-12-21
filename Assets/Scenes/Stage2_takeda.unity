@@ -3520,6 +3520,7 @@ MonoBehaviour:
   GoalObject: {fileID: 1305117280}
   GameOverArea: {fileID: 3163211130279804638}
   TimeStopPostProcessLayer: {fileID: 1483091906}
+  GameOverSE: {fileID: 8300000, guid: a32a720834721674dbb7b004c39fc35f, type: 3}
 --- !u!81 &1483091902
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6170,6 +6171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e6c79024ff99348ac93670955faa7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverDropSE: {fileID: 8300000, guid: 831d4187e5798f84ea591e1af5c79a08, type: 3}
   isGameOver: 0
 --- !u!1 &3163211130279804638
 GameObject:
