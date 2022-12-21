@@ -65,7 +65,7 @@ public class Title_Scene : MonoBehaviour
     {
         //「STAGE」というキーで保存されているInt値を読み込み
         int StageReload = PlayerPrefs.GetInt("CLEARSTAGE");
-        //もし「STAGE」が0以上なら試験選択画面に移行
+        //もし「CLEARSTAGE」が0以上なら試験選択画面に移行
         if (StageReload >= 0)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
