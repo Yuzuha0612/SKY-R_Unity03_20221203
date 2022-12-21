@@ -2132,6 +2132,7 @@ MonoBehaviour:
   GoalObject: {fileID: 131855071}
   GameOverArea: {fileID: 737251549}
   TimeStopPostProcessLayer: {fileID: 963194231}
+  GameOverSE: {fileID: 8300000, guid: a32a720834721674dbb7b004c39fc35f, type: 3}
 --- !u!82 &963194230
 AudioSource:
   m_ObjectHideFlags: 0
