@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2_takeda.unity
     guid: da7670fd2b4d5a94e95fb43e8b723f96
   - enabled: 1
-    path: Assets/Scenes/Stage3_miura.unity
+    path: Assets/Scenes/StageEle_miura.unity
     guid: 4d58c6d54e66d4b4db975ebe9a16d901
   - enabled: 1
     path: Assets/Scenes/Stage4_miura.unity
