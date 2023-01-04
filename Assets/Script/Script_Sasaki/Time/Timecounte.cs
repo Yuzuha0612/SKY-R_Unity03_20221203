@@ -23,6 +23,8 @@ public class Timecounte : MonoBehaviour
     public PostProcessLayer TimeStopPostProcessLayer;
     public AudioClip GameOverSE;//落ちるときの効果音
     AudioSource audioSource;
+    //2023/1/4追加　赤色のストップウォッチのイラストをTimeImageRedにいれる
+    public Image TimeImageRed;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -73,6 +75,9 @@ public class Timecounte : MonoBehaviour
          //4秒以下になったら
          //赤色にする
             timeLabel.color = new Color(1.0f, 0.0f ,0.0f ,1.0f);
+            //2023/1/4追加　制限時間が4秒以下になるとストップウォッチのイラストが赤色になる
+            TimeImageRed.enabled = true;
+
         }
         if (timeCount < 0)
         {//2022/11/27追加　ゲームオーバーから現在のステージに戻ってくる
