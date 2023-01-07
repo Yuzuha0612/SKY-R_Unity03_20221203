@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38223127, g: 0.4688933, b: 0.61398077, a: 1}
+  m_IndirectSpecularColor: {r: 0.3822313, g: 0.46889317, b: 0.613982, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2755,6 +2755,7 @@ MonoBehaviour:
   GameOverArea: {fileID: 5739046407380355901}
   TimeStopPostProcessLayer: {fileID: 963194231}
   GameOverSE: {fileID: 8300000, guid: a32a720834721674dbb7b004c39fc35f, type: 3}
+  TimeImageRed: {fileID: 0}
 --- !u!82 &963194230
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4237,7 +4238,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1790818316}
   - component: {fileID: 1790818318}
-  - component: {fileID: 1790818317}
   m_Layer: 0
   m_Name: SanaCamera
   m_TagString: Untagged
@@ -4260,14 +4260,6 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1790818317
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790818315}
-  m_Enabled: 1
 --- !u!20 &1790818318
 Camera:
   m_ObjectHideFlags: 0
@@ -4321,6 +4313,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5207c2e732733384faeaadfebde70b81, type: 3}
   m_PrefabInstance: {fileID: 1559983464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1827627914
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8339018281302306840, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_Name
+      value: TimeStoppingBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e707095dada73404c8124858232f73bd, type: 3}
 --- !u!1001 &2080873895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4477,7 +4526,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5739046407380355901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4490,7 +4539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1ff4e544592ddc144b4d894293116e04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
