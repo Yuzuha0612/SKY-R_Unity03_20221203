@@ -11124,7 +11124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 932744365}
   timeCount: 10
-  StageNumber: 6
+  StageNumber: 8
   TimeCountint: 0
   StartClickEnter: {fileID: 244785468}
   GoalObject: {fileID: 1792807725}
@@ -11492,7 +11492,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1984152517}
   - component: {fileID: 1984152519}
-  - component: {fileID: 1984152518}
   m_Layer: 0
   m_Name: SanaCamera
   m_TagString: Untagged
@@ -11515,14 +11514,6 @@ Transform:
   m_Father: {fileID: 1961971721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1984152518
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984152516}
-  m_Enabled: 0
 --- !u!20 &1984152519
 Camera:
   m_ObjectHideFlags: 0
@@ -11566,6 +11557,63 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &2006654478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8339018281302306840, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_Name
+      value: TimeStoppingBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e707095dada73404c8124858232f73bd, type: 3}
 --- !u!43 &2086593965
 Mesh:
   m_ObjectHideFlags: 0
@@ -11739,7 +11787,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6844895580492177738, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: ClearStageNumber
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6844895580492177741, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: m_RootOrder
@@ -11846,7 +11894,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7560814504517674841}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11859,7 +11907,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1ff4e544592ddc144b4d894293116e04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

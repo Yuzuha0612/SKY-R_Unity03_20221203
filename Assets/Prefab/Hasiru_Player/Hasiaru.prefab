@@ -489,6 +489,9 @@ MonoBehaviour:
   JumpSE: {fileID: 8300000, guid: a4ad8e3a97b3a504ca124f480ce6f5d6, type: 3}
   HighJumpSE: {fileID: 8300000, guid: 5e0464c0cc16bc245a8200b68734ac3a, type: 3}
   SabodonSE: {fileID: 8300000, guid: 05a73ba666c9e134eb2b976621391f31, type: 3}
+  TimeStopIn: {fileID: 8300000, guid: da64d198d4689d04d9a0c389cc7ad0c4, type: 3}
+  TimeStopOut: {fileID: 8300000, guid: 742f8091664ada64bbbe6200a83a1b2f, type: 3}
+  TimeStoppingSE: {fileID: 8300000, guid: 9ef2d532a81d3cb4c892602d55c9d870, type: 3}
 --- !u!82 &8724447520470211040
 AudioSource:
   m_ObjectHideFlags: 0

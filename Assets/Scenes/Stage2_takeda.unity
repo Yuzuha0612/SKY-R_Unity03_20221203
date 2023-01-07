@@ -547,7 +547,6 @@ GameObject:
   m_Component:
   - component: {fileID: 326261001}
   - component: {fileID: 326261003}
-  - component: {fileID: 326261002}
   m_Layer: 0
   m_Name: SanaCamera
   m_TagString: Untagged
@@ -570,14 +569,6 @@ Transform:
   m_Father: {fileID: 1483091904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &326261002
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326261000}
-  m_Enabled: 0
 --- !u!20 &326261003
 Camera:
   m_ObjectHideFlags: 0
@@ -2591,6 +2582,63 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1128825214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8339018281302306840, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_Name
+      value: TimeStoppingBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339018281302306846, guid: e707095dada73404c8124858232f73bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e707095dada73404c8124858232f73bd, type: 3}
 --- !u!1001 &1144991115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6509,7 +6557,7 @@ Transform:
   m_GameObject: {fileID: 3163211130279804638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30, y: -7.8, z: 0}
-  m_LocalScale: {x: 180, y: 1, z: 30}
+  m_LocalScale: {x: 180, y: 1, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6530,7 +6578,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3163211130279804638}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6543,7 +6591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1ff4e544592ddc144b4d894293116e04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

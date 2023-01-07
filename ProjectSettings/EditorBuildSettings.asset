@@ -24,8 +24,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2_takeda.unity
     guid: da7670fd2b4d5a94e95fb43e8b723f96
   - enabled: 1
+    path: Assets/Scenes/StageEle_miura.unity
+    guid: 4d58c6d54e66d4b4db975ebe9a16d901
+  - enabled: 1
     path: Assets/Scenes/Stage3_miura.unity
     guid: b2f498892a8e7aa488da0eac8b1e5c25
+  - enabled: 1
+    path: Assets/Scenes/StageSabo_miura.unity
+    guid: 5f28dc8aada779c448a2a52e833447a8
   - enabled: 1
     path: Assets/Scenes/Stage4_miura.unity
     guid: 8635aa255ed24ff4e9b81a9308151cd8
@@ -35,9 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage6_takeda.unity
     guid: f3a437b3cccc85b4c9243e2736cbf9b4
-  - enabled: 1
-    path: Assets/Scenes/StageEle_miura.unity
-    guid: 4d58c6d54e66d4b4db975ebe9a16d901
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8ff977a95390cd245ae8131734851b33
