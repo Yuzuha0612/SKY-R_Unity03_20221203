@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5323660075223732641}
   - component: {fileID: 5323660075223732640}
   - component: {fileID: 1722509803490171985}
+  - component: {fileID: 2585701961978621745}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -207,4 +208,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c66b1570f4b4c41afc94d4f3556fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magical10BGM: {fileID: 0}
+  BGMFirstVolume: 0
+--- !u!114 &2585701961978621745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5323660075223732647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9445d4317086f4ebc18466dcea2df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
