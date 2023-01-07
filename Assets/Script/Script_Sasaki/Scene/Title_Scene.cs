@@ -32,7 +32,15 @@ public class Title_Scene : MonoBehaviour
       
     }
 
-  
+    void Update()
+    {//2023/1/7追加マウス入力すると試験開始を選択させる
+        if (Input.GetMouseButtonDown(0))
+        {
+            FirstGameStartButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
 
     public void OnStartButtonClicked()
     {//試験開始ボタンを押すと最初から始めるボタンとステージ選択ボタン、戻るボタンが表示される

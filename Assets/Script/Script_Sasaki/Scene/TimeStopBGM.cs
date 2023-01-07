@@ -26,10 +26,10 @@ public class TimeStopBGM : MonoBehaviour
         {
             isStart = true;
         }
-        //移動キーを押している間音量を-0.01ずつ下げる
+        //移動キーを押している間音量を-0.05ずつ下げる
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) && isStart == true)
         {
-            audioBGMSource.volume -= 0.01f;
+            audioBGMSource.volume -= 0.05f;
         } else if(BGMFirstVolume > audioBGMSource.volume) //移動キーを放したら間音量を0.01ずつ上げる
         {
             audioBGMSource.volume += 0.01f;

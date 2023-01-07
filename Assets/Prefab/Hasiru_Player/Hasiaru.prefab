@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 8724447520387104671}
   - component: {fileID: 8724447520387104670}
   - component: {fileID: 8724447520387104659}
+  - component: {fileID: 904224641050287511}
   m_Layer: 6
   m_Name: Foot_RIght_Sound
   m_TagString: Untagged
@@ -322,6 +323,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FootWalkSE: {fileID: 8300000, guid: 62e5bc14982aa004ba1bfa5e20fdc31b, type: 3}
+--- !u!114 &904224641050287511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724447520387104667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e23930426592e4cbe866c2d6c2d570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8724447520470211051
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +352,7 @@ GameObject:
   - component: {fileID: 8724447520470211042}
   - component: {fileID: 8724447520470211040}
   - component: {fileID: 8724447520470211043}
+  - component: {fileID: 2892925723258403616}
   m_Layer: 6
   m_Name: Hasiaru
   m_TagString: Hasiru
@@ -585,6 +599,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 0
   bounceVectorMultiple: 0
+--- !u!114 &2892925723258403616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724447520470211051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e23930426592e4cbe866c2d6c2d570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8724447520940375225
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +934,7 @@ GameObject:
   - component: {fileID: 8724447521433635560}
   - component: {fileID: 8724447521433635563}
   - component: {fileID: 8724447521433635564}
+  - component: {fileID: 4687987515297660380}
   m_Layer: 6
   m_Name: Foot_Left_Sound
   m_TagString: Untagged
@@ -1118,6 +1145,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FootWalkSE: {fileID: 8300000, guid: 48b18d652d9d4d7498e37daacd764652, type: 3}
+--- !u!114 &4687987515297660380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724447521433635572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e23930426592e4cbe866c2d6c2d570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8739100334424916544
 GameObject:
   m_ObjectHideFlags: 0

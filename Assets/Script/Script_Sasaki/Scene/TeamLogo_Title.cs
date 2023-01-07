@@ -19,8 +19,15 @@ public class TeamLogo_Title : MonoBehaviour
         //フェードアウト用のパラメータ取得
         image = panel.GetComponent<Image>();
         color = image.color;
+        //以下キー数値の初期設定
         //「STAGE」というキーで、Int値の「StageNumber」を保存
         PlayerPrefs.SetInt("CLEARSTAGE", StageNumber);
+        PlayerPrefs.Save();
+        //「BGMVOLUME」というキーで、Float値の「0.5f」を保存
+        PlayerPrefs.SetFloat("BGMVOLUME",0.5f);
+        PlayerPrefs.Save();
+        //「SEVOLUME」というキーで、Float値の「1.0f」を保存
+        PlayerPrefs.SetFloat("SEVOLUME", 1.0f);
         PlayerPrefs.Save();
     }
 
