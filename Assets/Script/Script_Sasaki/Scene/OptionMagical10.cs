@@ -20,6 +20,20 @@ public class OptionMagical10 : MonoBehaviour
     [SerializeField] Text EndGameButtonButtonText;
     [SerializeField] Text OptionText;
     [SerializeField] Button OperationCloseAfterButton;
+    void Update()
+    {
+        if ((Input.GetMouseButtonDown(0)) && (VolumeControlButton.enabled == true))
+        {
+            VolumeControlButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
     public void OnOptionClicked()
     {
         VolumeControlButtonImage.enabled = true;

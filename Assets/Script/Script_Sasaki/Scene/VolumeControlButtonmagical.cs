@@ -21,6 +21,21 @@ public class VolumeControlButtonmagical: MonoBehaviour
     [SerializeField] Image VolumeControlHandleSEImage;
     //ボタンをキー選択させるため、最初に選択されるボタンをGameStartとしてFirstGameStartButtonに入れる
     [SerializeField] Button FirstGameStartButton;
+
+     void Update()
+    {
+        if ((Input.GetMouseButtonDown(0)) && (VolumeControlCloseButton.enabled == true))
+        {
+            VolumeControlCloseButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
     public void OnOperationVolumeControlClicked()
     {//音量調節ボタンをクリックすると音量調節バーが表示される
         VolumeControlBackgroundImage.enabled = true;

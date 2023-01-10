@@ -21,6 +21,27 @@ public class OperationSelect : MonoBehaviour
     void Start()
     {
     }
+    void Update()
+    {
+        if ((Input.GetMouseButtonDown(0)) && (ExplanationCloseButton.enabled == true))
+        {
+            //マウスをクリックすると操作説明画像が非表示にされる
+            ExplanationImage.enabled = false;
+            ExplanationCloseButton.enabled = false;
+            ExplanationImageCloseButton.enabled = false;
+            ExplanationMovieWalk.enabled = false;
+            ExplanationMovieJump.enabled = false;
+            ExplanationTextWalk.enabled = false;
+            ExplanationTextJump.enabled = false;
+            //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンを指示する
+            FirstGameStartButton.Select();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
     public void OnOperationExplanationButtonClicked()
     {//操作説明ボタンを押すと操作説明画像が表示される
         ExplanationImage.enabled = true;

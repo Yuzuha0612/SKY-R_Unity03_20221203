@@ -13,6 +13,7 @@ public class GameClear_Score : MonoBehaviour
     [SerializeField] Image NextStageImage;
     [SerializeField] Button NextStageButton;
     [SerializeField] Text NextStageText;
+    [SerializeField] Button TitleReloadButton;
     public Text TimeLeftLabel;
     //2022年12月11日最終ステージだけキー操作を行うための透明ボタン
     [SerializeField] Button FirstSelectButton;
@@ -58,6 +59,17 @@ public class GameClear_Score : MonoBehaviour
             NextStageButton.enabled = false;
             NextStageText.enabled = false;
             FirstSelectButton.enabled = true;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            TitleReloadButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     public void OnReturnTitleClearButtonClicked()
