@@ -34,11 +34,23 @@ public class Title_Scene : MonoBehaviour
 
     void Update()
     {//2023/1/7追加マウス入力すると試験開始を選択させる
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) &&(StageSelectButton.enabled==true))
         {
+            FirstStageButton.Select();
+            //FirstGameStartButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if  (Input.GetMouseButtonDown(0)&& (StageSelectButton.enabled == false))
+            {
             FirstGameStartButton.Select();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

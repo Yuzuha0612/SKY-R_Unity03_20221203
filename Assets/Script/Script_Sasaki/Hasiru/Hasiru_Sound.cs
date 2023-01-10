@@ -13,6 +13,8 @@ public class Hasiru_Sound : MonoBehaviour
     public AudioClip TimeStopOut;//2023/1/8追加　時間停止終了の音
     public AudioClip TimeStoppingSE;//2023/1/8追加　時間停止中の音
     private bool isJumping = false;
+    private bool isTimeStopIn = false;
+    private bool isTimeStopOut = false;
     AudioSource audioSource;
     void Start()
     {
@@ -28,19 +30,31 @@ public class Hasiru_Sound : MonoBehaviour
             audioSource.PlayOneShot(JumpSE);//ジャンプ効果音
         }
         /*
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        if (isTimeStopIn == true)
         {
             audioSource.PlayOneShot(TimeStopIn);//2023/1/8追加　時間停止能力開始の音
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-        {
-            audioSource.PlayOneShot(TimeStoppingSE);//2023/1/8追加　時間停止中の音
-        }
-        
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        if (isTimeStopOut == true)
         {
             audioSource.PlayOneShot(TimeStopOut);//2023/1/8追加　時間停止終了の音
+        }
+
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            isTimeStopIn = true;
+        } else  if ((Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) ||( Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            isTimeStopIn = false;
+        }
+
+        if ((Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow)) )
+        {
+            isTimeStopOut = true;
+        }else if (((Input.GetKeyUp(KeyCode.A) && Input.GetKeyUp(KeyCode.D)) || (Input.GetKeyUp(KeyCode.LeftArrow) && Input.GetKeyUp(KeyCode.RightArrow))))
+        {
+            isTimeStopOut = false;
         }*/
+
     }
     private void OnCollisionEnter(Collision collision)
     {

@@ -11,5 +11,18 @@ public class Button_SelectKey : MonoBehaviour
        // Firstbutton = GameObject.Find("Canvas/Button/").GextComponent<Button>();
       FirstButton.Select();
     }
-
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            FirstButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 }

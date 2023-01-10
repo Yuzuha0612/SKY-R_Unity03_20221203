@@ -20,6 +20,20 @@ public class EndGame_Button : MonoBehaviour
     //2022/12/5追加　ボタンをキー選択させるため、最初に選択されるボタンをGameStartとしてFirstGameStartButtonに入れる
     [SerializeField] Button FirstGameStartButton;
     //
+    void Update()
+    {
+        if ((Input.GetMouseButtonDown(0)) && (EndGameWarningCloseButton.enabled == true))
+        {
+            EndGameWarningCloseButton.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
     public void OnEndGameFirstButtonClicked()
     {//最初にゲーム終了ボタンを押すとゲーム終了警告画面が表示される
         EndGameWarningImage.enabled = true;
