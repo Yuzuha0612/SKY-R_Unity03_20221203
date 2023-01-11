@@ -7902,6 +7902,7 @@ GameObject:
   - component: {fileID: 2132021347}
   - component: {fileID: 2132021346}
   - component: {fileID: 2132021345}
+  - component: {fileID: 2132021348}
   m_Layer: 5
   m_Name: TimeCount
   m_TagString: Untagged
@@ -7972,6 +7973,21 @@ RectTransform:
   m_AnchoredPosition: {x: 510, y: -100}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2132021348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132021344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!4 &61624289612044760
 Transform:
   m_ObjectHideFlags: 0

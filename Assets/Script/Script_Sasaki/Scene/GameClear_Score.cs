@@ -59,6 +59,7 @@ public class GameClear_Score : MonoBehaviour
             NextStageButton.enabled = false;
             NextStageText.enabled = false;
             FirstSelectButton.enabled = true;
+            TitleReloadButton.Select();//2023/1/11追加　タイトルボタン選択
         }
         if (Input.GetMouseButtonDown(0))
         {
