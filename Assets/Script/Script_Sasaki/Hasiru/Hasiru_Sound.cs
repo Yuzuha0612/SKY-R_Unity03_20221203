@@ -15,10 +15,12 @@ public class Hasiru_Sound : MonoBehaviour
     private bool isJumping = false;
     private bool isTimeStopIn = false;
     private bool isTimeStopOut = false;
+    private Rigidbody Sanarb;
     AudioSource audioSource;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        //Sanarb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -30,7 +32,8 @@ public class Hasiru_Sound : MonoBehaviour
             audioSource.PlayOneShot(JumpSE);//ジャンプ効果音
         }
         /*
-        if (isTimeStopIn == true)
+         * Debug.Log(Sanarb.velocity.magnitude);
+        if (Sanarb.velocity>0)
         {
             audioSource.PlayOneShot(TimeStopIn);//2023/1/8追加　時間停止能力開始の音
         }
@@ -38,7 +41,7 @@ public class Hasiru_Sound : MonoBehaviour
         {
             audioSource.PlayOneShot(TimeStopOut);//2023/1/8追加　時間停止終了の音
         }
-
+        
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
         {
             isTimeStopIn = true;
