@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e6c79024ff99348ac93670955faa7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverDropSE: {fileID: 8300000, guid: 831d4187e5798f84ea591e1af5c79a08, type: 3}
+  GameOverDropSE: {fileID: 8300000, guid: 6f01da49a8aa40346ac56aa45b683080, type: 3}
   isGameOver: 0
 --- !u!82 &7128145800931757322
 AudioSource:
