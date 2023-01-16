@@ -11,6 +11,7 @@ public class EndGame_Button : MonoBehaviour
     [SerializeField] Button EndGameWarningCloseButton;
     [SerializeField] Image EndGameWarningCloseImage;
     [SerializeField] Text EndGameWarningCloseText;
+    [SerializeField] Text EndGameWarningCloseSelectText;
     //ゲーム終了しますかテキスト
     [SerializeField] Text EndGameWarningText;
     //はいボタン
@@ -65,7 +66,8 @@ public class EndGame_Button : MonoBehaviour
         EndGameWarningCloseText.enabled = false;
         EndGameButton.enabled = false;
         EndGameImage.enabled = false;
-        EndGameText.enabled = false;
+        EndGameText.enabled = false; 
+        EndGameWarningCloseSelectText.enabled = false;
         //2022/12/5追加　ボタンをキー選択させるため、試験開始ボタンを選択する
         FirstGameStartButton.Select();
     }

@@ -143,9 +143,23 @@ public class SceneSelect : MonoBehaviour
             Stage8Button.enabled = true;
         }
     }
-   
-   
-public void OnStageSelectButtonClicked()
+
+    void Update()
+    {//2023/1/16追加 マウス入力すると9級を選択させる
+       
+        if (Input.GetMouseButtonDown(0) )
+        {
+            Stage0Button.Select();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    public void OnStageSelectButtonClicked()
     {  //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("StageSelect", 0.5f);
     }
