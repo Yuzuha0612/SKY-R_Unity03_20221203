@@ -16,8 +16,7 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'LeftUpperLeg' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -247,14 +246,9 @@ ModelImporter:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: katada
-      parentName: sana(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -1.1103511e-16, y: -0.00007965366, z: 1, w: -6.1241184e-17}
-      scale: {x: 1, y: 1, z: 1}
     - name: arada
       parentName: sana(Clone)
-      position: {x: -0, y: 0, z: 0}
+      position: {x: 0, y: -0.022174595, z: 0}
       rotation: {x: -0.7071068, y: -0.000000030908623, z: -0.000000030908623, w: 0.7071068}
       scale: {x: 50, y: 50, z: 50}
     - name: body
@@ -262,21 +256,6 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0.006163152}
       rotation: {x: 0.7071068, y: -0.0000000842937, z: -0.00000008429369, w: 0.7071067}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
-    - name: neck
-      parentName: body
-      position: {x: -0, y: 0.0020919621, z: 0}
-      rotation: {x: -3.552712e-15, y: -1.7763568e-14, z: 2.019484e-28, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: head
-      parentName: neck
-      position: {x: -0, y: 0.0012849671, z: 0}
-      rotation: {x: -3.552712e-15, y: 0, z: 2.019484e-28, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: head_end
-      parentName: head
-      position: {x: -0, y: 0.0066716364, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: arm_L
       parentName: body
       position: {x: -0, y: 0.0020919621, z: 0}
@@ -295,26 +274,6 @@ ModelImporter:
     - name: arm3_L_end
       parentName: arm3_L
       position: {x: -0, y: 0.00082260836, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: foot_L
-      parentName: body
-      position: {x: -0.0007968022, y: -0.003259725, z: 1.8997243e-10}
-      rotation: {x: 0.56285834, y: -0.42800748, z: 0.5628585, w: 0.42800757}
-      scale: {x: 1, y: 1, z: 1}
-    - name: foot2_L
-      parentName: foot_L
-      position: {x: -2.1175823e-24, y: 0.0013232816, z: 0}
-      rotation: {x: -0.09900793, y: 0.00000023841852, z: -0.00000011920926, w: 0.99508667}
-      scale: {x: 1, y: 1, z: 1}
-    - name: foot3_L
-      parentName: foot2_L
-      position: {x: -1.44329e-17, y: 0.00073096046, z: -2.7939677e-11}
-      rotation: {x: 0.004949628, y: 0.00000003307995, z: -0.000000025473698, w: 0.9999877}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: foot3_L_end
-      parentName: foot3_L
-      position: {x: -0, y: 0.0007001683, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: arm_R
@@ -337,6 +296,26 @@ ModelImporter:
       position: {x: -0, y: 0.00082260836, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+    - name: foot_L
+      parentName: body
+      position: {x: -0.0007968022, y: -0.003259725, z: 1.8997243e-10}
+      rotation: {x: 0.7016231, y: -0.08789253, z: 0.701623, w: 0.08789256}
+      scale: {x: 1, y: 1, z: 1}
+    - name: foot2_L
+      parentName: foot_L
+      position: {x: -2.1175823e-24, y: 0.0013232816, z: 0}
+      rotation: {x: -0.05486865, y: 0.0016950238, z: 0.017033538, w: 0.9983469}
+      scale: {x: 1, y: 1, z: 1}
+    - name: foot3_L
+      parentName: foot2_L
+      position: {x: -1.44329e-17, y: 0.00073096046, z: -2.7939677e-11}
+      rotation: {x: -0.44003323, y: -0.34515813, z: -0.47815338, w: 0.6772046}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: foot3_L_end
+      parentName: foot3_L
+      position: {x: -0, y: 0.0007001683, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     - name: foot_R
       parentName: body
       position: {x: 0.0007968022, y: -0.003259725, z: -1.8997243e-10}
@@ -350,12 +329,32 @@ ModelImporter:
     - name: foot3_R
       parentName: foot2_R
       position: {x: -1.9578252e-17, y: 0.00073096034, z: -2.3283063e-11}
-      rotation: {x: 0.015776647, y: -0.00000007407737, z: -0.0000000072039605, w: 0.99987555}
+      rotation: {x: 0.012303582, y: -0.6253386, z: 0.028005604, w: 0.77975386}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: foot3_R_end
       parentName: foot3_R
       position: {x: -0, y: 0.0007001683, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: neck
+      parentName: body
+      position: {x: -0, y: 0.0020919621, z: 0}
+      rotation: {x: -3.552712e-15, y: -1.7763568e-14, z: 2.019484e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: neck
+      position: {x: -0, y: 0.0012849671, z: 0}
+      rotation: {x: -3.552712e-15, y: 0, z: 2.019484e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_end
+      parentName: head
+      position: {x: -0, y: 0.0066716364, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: katada
+      parentName: sana(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.1103511e-16, y: -0.00007965366, z: 1, w: -6.1241184e-17}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
