@@ -6,9 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class GameOver_Scene : MonoBehaviour
 {
+   // public Text TimeupText;
+    //public Text GameOverText;
     void Start()
-    {
-       
+    {/*
+        //「TIMEUP」というキーで保存されているInt値を読み込み
+        int TIMEUPENABLED = PlayerPrefs.GetInt("TIMEUP");
+        if (TIMEUPENABLED == 1)
+        {
+            //TIMEUPを表示させる
+            TimeupText.enabled = true;
+            GameOverText.enabled = false;
+        }
+        if (TIMEUPENABLED == 2)
+        {
+            //GameOverを表示させる
+            TimeupText.enabled = false;
+            GameOverText.enabled = true;
+        }*/
     }
     public void OnTitleReloadButtonClicked()
     {

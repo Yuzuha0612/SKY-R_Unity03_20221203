@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076949747369878965, guid: c17fa72112f89eb43a84d33eba64db77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17
+      value: 26.3
       objectReference: {fileID: 0}
     - target: {fileID: 2076949747369878965, guid: c17fa72112f89eb43a84d33eba64db77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2306,6 +2306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableKeyInputSeconds: 1
   isTogeDamege: 0
+  DamegeEffect: {fileID: 1506376151}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,7 +2335,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.93267375, b: 0.7490566, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4028,6 +4029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+--- !u!1 &1506376151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6279954934302408107, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+  m_PrefabInstance: {fileID: 1506376150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1512360502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,6 +4881,7 @@ GameObject:
   - component: {fileID: 1710287784}
   - component: {fileID: 1710287783}
   - component: {fileID: 1710287782}
+  - component: {fileID: 1710287785}
   m_Layer: 0
   m_Name: Post-process Volume
   m_TagString: Untagged
@@ -4927,6 +4934,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710287785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710287781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8dd47a4422709446ad0589c2b3891a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeStopPostProcessVolume: {fileID: 1710287782}
 --- !u!43 &1754115052
 Mesh:
   m_ObjectHideFlags: 0
