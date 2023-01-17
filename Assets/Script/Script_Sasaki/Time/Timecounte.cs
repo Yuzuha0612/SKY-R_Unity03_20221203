@@ -34,7 +34,7 @@ public class Timecounte : MonoBehaviour
         GameOverArea = GameObject.FindGameObjectWithTag("GameOverArea");
         //Sabodon = GameObject.FindGameObjectWithTag("TogeToge");
         //2022年12月9日追加　時間停止エフェクトをオフにする
-        TimeStopPostProcessLayer.enabled = false;
+        //TimeStopPostProcessLayer.enabled = false;
     }
 
     void Update()
@@ -54,14 +54,14 @@ public class Timecounte : MonoBehaviour
             {
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
                 //2022年12月9日追加　時間停止エフェクトをオンにする
-                TimeStopPostProcessLayer.enabled = true;
+               // TimeStopPostProcessLayer.enabled = true;
             }
             else
             {
                 timeCount -= Time.deltaTime;
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
                 //2022年12月9日追加　時間停止エフェクトをオフにする
-                TimeStopPostProcessLayer.enabled = false;
+                //TimeStopPostProcessLayer.enabled = false;
             }
             //2022年12月9日追加　キーを押したらペナルティとして0.1秒減らす
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
@@ -86,9 +86,10 @@ public class Timecounte : MonoBehaviour
             //「STAGE」というキーで、Int値の「StageNumber」を保存
             PlayerPrefs.SetInt("STAGE", StageNumber);
             PlayerPrefs.Save();
+            timeLabel.text = "TIME:0.00"; 
             //ゲームオーバー画面に移動
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
-            FadeManager.Instance.LoadScene("GameOver", 0.2f);
+            FadeManager.Instance.LoadScene("GameOverTimeUp", 0.2f);
         }
 
         if (GoalObject.GetComponent<Goal_GameClear>().isGameClear)

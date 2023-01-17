@@ -9,6 +9,7 @@ public class SceneSelect : MonoBehaviour
 {//ステージ選択画面移動ボタン
     [SerializeField] Button Stage0Button;
     [SerializeField] Button Stage1Button;
+    [SerializeField] Image Stage1Image;
     [SerializeField] Button Stage2Button;
     [SerializeField] Image Stage2Image;
     [SerializeField] Button Stage3Button;
@@ -35,7 +36,15 @@ public class SceneSelect : MonoBehaviour
         if (StageReload == 0)
         {
             Stage0Button.enabled = true;
-            Stage0Button.image.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+           // Stage0Button.image.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+            Stage1Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage2Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage3Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage4Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage5Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が1ならStage1までのボタンを有効 それ以降のステージのボタンの色を灰色
         if (StageReload == 1)

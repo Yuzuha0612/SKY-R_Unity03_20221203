@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TeamLogo_Title : MonoBehaviour
 {//チームロゴを表示させてタイトルに移動するスクリプトです
-    public float fadeOutTime = 5.0f;  //フェードアウトの開始タイミング(秒)
+    public float fadeOutTime = 0.1f;  //フェードアウトの開始タイミング(秒)
     private float nowTime = 0.0f;     //タイミングカウント用
     public GameObject panel;          //フェードアウト用パネルUIオブジェクト
     private Image image;              //panelのコンポーネント

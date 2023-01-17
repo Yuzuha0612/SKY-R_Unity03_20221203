@@ -3827,6 +3827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stage0Button: {fileID: 14206753}
   Stage1Button: {fileID: 2072210630}
+  Stage1Image: {fileID: 2072210631}
   Stage2Button: {fileID: 1015720158}
   Stage2Image: {fileID: 1015720159}
   Stage3Button: {fileID: 1407080006}
