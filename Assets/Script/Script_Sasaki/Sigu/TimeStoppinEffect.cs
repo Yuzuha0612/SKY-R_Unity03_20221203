@@ -30,12 +30,11 @@ public class TimeStoppinEffect : MonoBehaviour
                 TimeStopPostProcessColorGrading.saturation.value = -70.0f;
             }
 
-        }
-        else
+        } else
         {
             if (TimeStopPostProcessColorGrading)
             {
-                TimeStopPostProcessColorGrading.saturation.value = 70.0f;
+                TimeStopPostProcessColorGrading.saturation.value = 0.0f;
             }
         }
     }

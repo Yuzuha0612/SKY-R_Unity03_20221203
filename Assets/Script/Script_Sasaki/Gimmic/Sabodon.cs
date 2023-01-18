@@ -10,6 +10,7 @@ public class Sabodon : MonoBehaviour
 	public static Sabodon instance;
 	public bool isTogeDamege;
 	public GameObject DamegeEffect;
+	
 	public void Awake()
 	{
 		if (instance == null)
@@ -21,6 +22,8 @@ public class Sabodon : MonoBehaviour
 	{
 		isTogeDamege = true;
 		DamegeEffect.SetActive(false);
+		
+	
 	}
     private void OnCollisionEnter(Collision collision)
 	{
@@ -42,6 +45,7 @@ public class Sabodon : MonoBehaviour
 		isTogeDamege = false;
 		//ダメージエフェクト有効
 		DamegeEffect.SetActive(true);
+		
 		//時間停止能力無効
 		//Hasiru1.gameObject.GetComponent<StopAbility>().enabled = false;
 		// アニメーション無効
@@ -55,6 +59,7 @@ public class Sabodon : MonoBehaviour
 		isTogeDamege = true;
 		//ダメージエフェクト無効
 		DamegeEffect.SetActive(false);
+		
 		//時間停止能力有効
 		//Hasiru1.gameObject.GetComponent<StopAbility>().enabled = true;
 		// アニメーションを元に戻す

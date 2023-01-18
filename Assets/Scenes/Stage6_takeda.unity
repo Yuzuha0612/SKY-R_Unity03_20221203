@@ -10834,6 +10834,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2218585509682547874, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218585509682547874, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8724447520470211051, guid: 1d876007a5d68b44b9b72076c7610842, type: 3}
       propertyPath: m_Name
       value: Hasiaru
