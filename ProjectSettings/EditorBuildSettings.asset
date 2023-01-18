@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StagePata_miura.unity
     guid: 37756c367eafa3f4eac7b934ace77a77
+  - enabled: 1
+    path: Assets/Scenes/StageTeku_miura.unity
+    guid: 91a621167ba459245861cea329e0ce31
   m_configObjects: {}

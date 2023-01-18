@@ -38,11 +38,17 @@ public class GameClear_Score : MonoBehaviour
         //TimeCountの呼び出し
         //「TIME」というキーで保存されているInt値を読み込み
         int TimeLeft = PlayerPrefs.GetInt("TIME");
-        if (TimeLeft < 3 )
-        {//「TIME」が3秒以下の時は星を一つ表示させる
+        //2023/1/19追加　「TIMESTAR1」というキーで保存されているInt値を読み込み
+        int TimeStar1 = PlayerPrefs.GetInt("TIMESTAR1");
+        //2023/1/19追加　「TIMESTAR2」というキーで保存されているInt値を読み込み
+       // int TimeStar2 = PlayerPrefs.GetInt("TIMESTAR2");
+        //2023/1/19追加　「TIMESTAR3」というキーで保存されているInt値を読み込み
+        int TimeStar3 = PlayerPrefs.GetInt("TIMESTAR3");
+        if (TimeLeft < TimeStar1)
+        {//「TIME」がTIMESTAR1(3秒以下)の時は星を一つ表示させる
             ClearStarImage1.enabled = true;
-        } else if (TimeLeft > 7)
-        {//「TIME」が7秒以上の時は星を三つ表示させる
+        } else if (TimeLeft > TimeStar3)
+        {//「TIME」がTIMESTAR3(7秒以上)の時は星を三つ表示させる
             ClearStarImage1.enabled = true;
             ClearStarImage2.enabled = true;
             ClearStarImage3.enabled = true;
@@ -56,8 +62,8 @@ public class GameClear_Score : MonoBehaviour
         //NextStageに1を足す
         NextStage++;
         //最後のステージの場合
-        //2023/1/7もし「STAGE」が9ならボタンを非表示にさせ、透明ボタンを有効にする
-        if (NextStage == 9)
+        //2023/1/7もし「STAGE」が10ならボタンを非表示にさせ、透明ボタンを有効にする
+        if (NextStage == 11)
         {
             NextStageImage.enabled = false;
             NextStageButton.enabled = false;
@@ -89,49 +95,60 @@ public class GameClear_Score : MonoBehaviour
         //NextStageに1を足す
         NextStage++;
         //クリアした次のステージを表示させる
-        //もし「STAGE」が1ならStage1に移動する
+        //もし「STAGE」が1ならStagePata_miura"に移動する
         if (NextStage == 1)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+            FadeManager.Instance.LoadScene("StagePata_miura", 0.5f);
+        }
+        //もし「STAGE」が2ならStageTeku_miuraに移動する
+        if (NextStage == 2)
+        {
+            //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+            FadeManager.Instance.LoadScene("StageTeku_miura", 0.5f);
+        }
+        //もし「STAGE」が3ならStage1に移動する
+        if (NextStage == 3)
+        {//2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage1", 0.5f);
         }
-        //もし「STAGE」が2ならStage2_Takedaに移動する
-        if (NextStage == 2)
+        //もし「STAGE」が4ならStage2_takedaに移動する
+        if (NextStage == 4)
         {//2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage2_takeda", 0.5f);
         }
-        //もし「STAGE」が3ならStageEle_miuraに移動する
-        if (NextStage == 3)
+        //もし「STAGE」が5ならStageEle_miuraに移動する
+        if (NextStage == 5)
         {
             FadeManager.Instance.LoadScene("StageEle_miura", 0.5f);
         }
-        //もし「STAGE」が4ならStage3_miuraに移動する
-        if (NextStage == 4)
+        //もし「STAGE」が6ならStage3_miuraに移動する
+        if (NextStage == 6)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage3_miura", 0.5f);
         }
-        //もし「STAGE」が5ならStageSabo_miuraに移動する
-        if (NextStage == 5)
+        //もし「STAGE」が7ならStageSabo_miuraに移動する
+        if (NextStage == 7)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("StageSabo_miura", 0.5f);
         }
-        //もし「STAGE」が6ならStage4_miuraに移動する
-        if (NextStage == 6)
+        //もし「STAGE」が8ならStage4_miuraに移動する
+        if (NextStage == 8)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage4_miura", 0.5f);
         }
 
-        //もし「STAGE」が7ならStage5_Takedaに移動する
-        if (NextStage == 7)
+        //もし「STAGE」が9ならStage5_Takedaに移動する
+        if (NextStage == 9)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage5_takeda", 0.5f);
         }
-        //もし「STAGE」が8ならStage6_Takedaに移動する
-        if (NextStage == 8)
+        //もし「STAGE」が10ならStage6_Takedaに移動する
+        if (NextStage == 10)
         {
             //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
             FadeManager.Instance.LoadScene("Stage6_takeda", 0.5f);
