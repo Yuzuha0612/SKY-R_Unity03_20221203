@@ -8,6 +8,8 @@ public class GameOver_Drop : MonoBehaviour
     public AudioClip GameOverDropSE;//落ちるときの効果音
     AudioSource audioSource;
     public bool isGameOver;
+    //2022/11/27追加　現在のステージ番号
+    public int StageNumber;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,7 +23,11 @@ public class GameOver_Drop : MonoBehaviour
         if (collision.gameObject.tag == "Hasiru")
         {
             audioSource.PlayOneShot(GameOverDropSE);//ゲームオーバー効果音
-            isGameOver = true;
+            //「STAGE」というキーで、Int値の「StageNumber」を保存
+            PlayerPrefs.SetInt("STAGE", StageNumber);
+            PlayerPrefs.Save();
+            // isGameOver = true;
+            FadeManager.Instance.LoadScene("GameOver", 0.6f);
         }
     }
 }

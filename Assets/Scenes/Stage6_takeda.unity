@@ -680,6 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverDropSE: {fileID: 8300000, guid: 831d4187e5798f84ea591e1af5c79a08, type: 3}
   isGameOver: 0
+  StageNumber: 0
 --- !u!65 &213342610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11496,7 +11497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 932744365}
   timeCount: 10
-  StageNumber: 8
+  StageNumber: 10
+  StageClass: 1
   TimeCountint: 0
   StartClickEnter: {fileID: 244785468}
   GoalObject: {fileID: 1792807725}
@@ -12159,7 +12161,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6844895580492177738, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: ClearStageNumber
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6844895580492177741, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: m_RootOrder
@@ -13106,6 +13108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverDropSE: {fileID: 8300000, guid: 6f01da49a8aa40346ac56aa45b683080, type: 3}
   isGameOver: 0
+  StageNumber: 10
 --- !u!65 &7560814504517674843
 BoxCollider:
   m_ObjectHideFlags: 0

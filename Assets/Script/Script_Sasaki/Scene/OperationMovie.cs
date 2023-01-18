@@ -1,18 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OperationMovie : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Image KeyImageRedA;
+    public Image KeyImageRedD;
+    public Image KeyImageRedRight;
+    public Image KeyImageRedLeft;
+    public Image KeyImageRedSpace;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+
+
+            KeyImageRedD.enabled = true;
+            KeyImageRedLeft.enabled = true;
+        }
+        else
+        {
+            
+
+            KeyImageRedD.enabled = false;
+            KeyImageRedLeft.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            KeyImageRedA.enabled = true;
+            
+            KeyImageRedRight.enabled = true;
+            
+        }
+        else
+        {
+            KeyImageRedA.enabled = false;
+
+            KeyImageRedRight.enabled = false;
+           
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            KeyImageRedSpace.enabled = true;
+        }
+        else
+        {
+            KeyImageRedSpace.enabled = false;
+        }
+        }
 }

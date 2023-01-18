@@ -440,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6844895580492177738, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: ClearStageNumber
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844895580492177741, guid: 23d4c870f1ccc004a9bd6e538caca14f, type: 3}
       propertyPath: m_RootOrder
@@ -2078,6 +2078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableKeyInputSeconds: 1
   isTogeDamege: 0
+  DamegeEffect: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 2132021345}
   timeCount: 10
-  StageNumber: 5
+  StageNumber: 1
+  StageClass: 10
   TimeCountint: 0
   StartClickEnter: {fileID: 640994692}
   GoalObject: {fileID: 1150008502159050114}
@@ -4383,6 +4385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverDropSE: {fileID: 8300000, guid: 831d4187e5798f84ea591e1af5c79a08, type: 3}
   isGameOver: 0
+  StageNumber: 0
 --- !u!65 &1585020819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5050,6 +5053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverDropSE: {fileID: 8300000, guid: 6f01da49a8aa40346ac56aa45b683080, type: 3}
   isGameOver: 0
+  StageNumber: 1
 --- !u!1 &1150008502159050114
 GameObject:
   m_ObjectHideFlags: 0

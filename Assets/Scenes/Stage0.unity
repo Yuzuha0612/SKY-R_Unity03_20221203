@@ -12353,6 +12353,7 @@ MonoBehaviour:
   timeLabel: {fileID: 2132021345}
   timeCount: 10
   StageNumber: 0
+  StageClass: 11
   TimeCountint: 0
   StartClickEnter: {fileID: 954622046}
   GoalObject: {fileID: 131855071}
