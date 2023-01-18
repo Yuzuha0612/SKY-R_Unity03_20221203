@@ -24,14 +24,16 @@ public class SceneSelect : MonoBehaviour
     [SerializeField] Image Stage7Image;
     [SerializeField] Button Stage8Button;
     [SerializeField] Image Stage8Image;
+    [SerializeField] Button Stage9Button;
+    [SerializeField] Image Stage9Image;
+    [SerializeField] Button Stage10Button;
+    [SerializeField] Image Stage10Image;
     void Start()
     {
-        //ボタンをキー選択させるため、9級ボタンを選択する
+        //ボタンをキー選択させるため、11級ボタンを選択する
         Stage0Button.Select();
         //2022/12/19キー名を変更「STAGECLEAR」というキーで保存されているInt値を読み込み
          int StageReload = PlayerPrefs.GetInt("CLEARSTAGE");
-        //ベータ版用、全てのステージを表示させる
-       // int StageReload = 6;
         //もし「STAGE」が0ならStage0までのボタンを有効
         if (StageReload == 0)
         {
@@ -45,6 +47,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が1ならStage1までのボタンを有効 それ以降のステージのボタンの色を灰色
         if (StageReload == 1)
@@ -58,6 +62,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が2ならStage2_Takedaまでのボタンを有効
         if (StageReload == 2)
@@ -71,6 +77,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が3ならStageEle_miuraまでのボタンを有効
         if (StageReload == 3)
@@ -84,6 +92,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が4ならStage3_miuraまでのボタンを有効
         if (StageReload == 4)
@@ -97,6 +107,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
 
         //もし「STAGE」が5ならStage4_miuraまでのボタンを有効
@@ -111,6 +123,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が6ならStage5_Takedaまでのボタンを有効
         if (StageReload == 6)
@@ -124,6 +138,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Button.enabled = true;
             Stage7Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が7ならStageSabo_miuraまでのボタンを有効
         if (StageReload == 7)
@@ -137,6 +153,8 @@ public class SceneSelect : MonoBehaviour
             Stage6Button.enabled = true;
             Stage7Button.enabled = true;
             Stage8Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
         //もし「STAGE」が8ならStage6_Takedaまでのボタンを有効
         if (StageReload == 8)
@@ -150,11 +168,41 @@ public class SceneSelect : MonoBehaviour
             Stage6Button.enabled = true;
             Stage7Button.enabled = true;
             Stage8Button.enabled = true;
+            Stage9Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+        }
+        if (StageReload == 9)
+        {
+            Stage0Button.enabled = true;
+            Stage1Button.enabled = true;
+            Stage2Button.enabled = true;
+            Stage3Button.enabled = true;
+            Stage4Button.enabled = true;
+            Stage5Button.enabled = true;
+            Stage6Button.enabled = true;
+            Stage7Button.enabled = true;
+            Stage8Button.enabled = true;
+            Stage9Button.enabled = true;
+            Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
+        }
+        if (StageReload == 9)
+        {
+            Stage0Button.enabled = true;
+            Stage1Button.enabled = true;
+            Stage2Button.enabled = true;
+            Stage3Button.enabled = true;
+            Stage4Button.enabled = true;
+            Stage5Button.enabled = true;
+            Stage6Button.enabled = true;
+            Stage7Button.enabled = true;
+            Stage8Button.enabled = true;
+            Stage9Button.enabled = true;
+            Stage10Button.enabled = true;
         }
     }
 
     void Update()
-    {//2023/1/16追加 マウス入力すると9級を選択させる
+    {//2023/1/16追加 マウス入力すると11級を選択させる
        
         if (Input.GetMouseButtonDown(0) )
         {
@@ -178,47 +226,57 @@ public class SceneSelect : MonoBehaviour
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage0", 0.5f);
     }
-
     public void OnStageSelect01ButtonClicked()
+    {//StagePata_miura移動ボタン
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("StagePata_miura", 0.5f);
+    }
+
+    public void OnStageSelect02ButtonClicked()
+    {//Stage1移動ボタン
+        //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
+        FadeManager.Instance.LoadScene("StageTeku_miura", 0.5f);
+    }
+    public void OnStageSelect03ButtonClicked()
     {//Stage1移動ボタン
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage1", 0.5f);
     }
 
-    public void OnStageSelect02ButtonClicked()
+    public void OnStageSelect04ButtonClicked()
     {//Stage2_takeda移動ボタン
      //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage2_takeda", 0.5f);
     }
 
-    public void OnStageSelect03ButtonClicked()
+    public void OnStageSelect05ButtonClicked()
     {//Stage2_takeda移動ボタン
      //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("StageEle_miura", 0.5f);
     }
-    public void OnStageSelect04ButtonClicked()
+    public void OnStageSelect06ButtonClicked()
     {//Stage3_miura移動ボタン
         FadeManager.Instance.LoadScene("Stage3_miura", 0.5f);
     }
-    public void OnStageSelect05ButtonClicked()
+    public void OnStageSelect07ButtonClicked()
     {//StageSabo_miura移動ボタン
      //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("StageSabo_miura", 0.5f);
     }
 
-    public void OnStageSelect06ButtonClicked()
+    public void OnStageSelect08ButtonClicked()
     {//Stage4_miura移動ボタン
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage4_miura", 0.5f);
     }
     
-    public void OnStageSelect07ButtonClicked()
+    public void OnStageSelect09ButtonClicked()
     {//Stage5_takeda移動ボタン
      //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage5_takeda", 0.5f);
     }
 
-    public void OnStageSelect08ButtonClicked()
+    public void OnStageSelect10ButtonClicked()
     {//Stage6_takeda移動ボタン
      //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("Stage6_takeda", 0.5f);

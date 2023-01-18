@@ -17,11 +17,15 @@ public class GameClear_Score : MonoBehaviour
     public Text TimeLeftLabel;
     //2022年12月11日最終ステージだけキー操作を行うための透明ボタン
     [SerializeField] Button FirstSelectButton;
+    [SerializeField] Text StageClearText;
     void Start()
     {
         NextStageImage.enabled = true;
         NextStageButton.enabled = true;
         NextStageText.enabled = true;
+        //「STAGE」というキーで保存されているInt値を読み込み
+        int ClearStage = PlayerPrefs.GetInt("STAGECLASS");
+        StageClearText.text = ClearStage + "級合格！" ;
     }
 
     void Update()

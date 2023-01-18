@@ -32,26 +32,25 @@ public class SiguTimeStoppingParticle : MonoBehaviour
             //左右キーのどちらかが押されたときエフェクトを小さくする
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
             {
-                if (Effecth>0 || Effectv > 0) {
-                    Effecth-=0.5f;
-                    Effectv-=0.5f;
-                    this.gameObject.transform.localScale = new Vector3(Effectv, Effecth, 1.0f);
-                }
-                else
+                if (Effecth > 0 || Effectv > 0)
                 {
-                    
-                }
-            }
-            else
-            {
+                    Effecth -= 0.3f;
+                    Effectv -= 0.3f;
+                    this.gameObject.transform.localScale = new Vector3(Effectv, Effecth, 1.0f);
+                } else if (Effecth < 0 || Effectv < 0)
+                    {
+                    this.gameObject.transform.localScale = new Vector3(0.0f, 0.0f, 1.0f);
+                    //this.gameObject.SetActive(false);
+                     }
+            } else{
                 if (Effecth <6 || Effectv < 6)
                 {
-                    Effectv+=0.5f;
-                    Effecth+=0.5f;
+                   // this.gameObject.SetActive(true);
+                    Effectv +=0.3f;
+                    Effecth+=0.3f;
                     //左右キーのどちらかが押されたときエフェクトを大きくする
                     this.gameObject.transform.localScale = new Vector3(Effectv, Effecth, 1.0f);
-                }else if(Effecth > 6 || Effectv > 6)
-                {
+                }else if(Effecth > 6 || Effectv > 6){
 
                 }
             }

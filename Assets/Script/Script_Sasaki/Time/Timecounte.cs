@@ -12,6 +12,8 @@ public class Timecounte : MonoBehaviour
     public float timeCount;
     //2022/11/27追加　現在のステージ番号
     public int StageNumber;
+    //2022/11/27追加　現在の級
+    public int StageClass;
     //2022/11/23追加 ゲーム開始判定
     bool isStart = false;
     public int TimeCountint;
@@ -35,6 +37,9 @@ public class Timecounte : MonoBehaviour
         //Sabodon = GameObject.FindGameObjectWithTag("TogeToge");
         //2022年12月9日追加　時間停止エフェクトをオフにする
         //TimeStopPostProcessLayer.enabled = false;
+        //「STAGECLASS」というキーで、Int値の「StageClass」を保存
+        PlayerPrefs.SetInt("STAGECLASS", StageClass);
+        PlayerPrefs.Save();
     }
 
     void Update()
@@ -96,10 +101,11 @@ public class Timecounte : MonoBehaviour
         {
             GameClear_Time();
         }
+        /*
         if (GameOverArea.GetComponent<GameOver_Drop>().isGameOver)
         {
             GameOver_Drop();
-        }
+        }*/
     }
 
     private void GameClear_Time()
@@ -120,6 +126,7 @@ public class Timecounte : MonoBehaviour
         //2023/1/11 シーン切り替え時にフェードインフェードアウトの演出を追加ゲームクリア画面に移動
         FadeManager.Instance.LoadScene("GameClear", 0.3f);
     }
+    /*
     private void GameOver_Drop()
     {
        
@@ -128,7 +135,7 @@ public class Timecounte : MonoBehaviour
         PlayerPrefs.Save();
         //2022/12/19　シーン切り替え時にフェードインフェードアウトの演出を追加
         FadeManager.Instance.LoadScene("GameOver", 0.6f);
-    }
+    }*/
    
 
 }
