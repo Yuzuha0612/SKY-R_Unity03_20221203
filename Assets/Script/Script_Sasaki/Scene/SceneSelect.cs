@@ -37,6 +37,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が0ならStage0までのボタンを有効
         if (StageReload == 0)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
            // Stage0Button.image.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
             Stage1Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
@@ -53,6 +54,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が1ならStage1までのボタンを有効 それ以降のステージのボタンの色を灰色
         if (StageReload == 1)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
@@ -68,6 +70,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が2ならStage2_Takedaまでのボタンを有効
         if (StageReload == 2)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -83,6 +86,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が3ならStageEle_miuraまでのボタンを有効
         if (StageReload == 3)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -98,6 +102,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が4ならStage3_miuraまでのボタンを有効
         if (StageReload == 4)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -114,6 +119,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が5ならStage4_miuraまでのボタンを有効
         if (StageReload == 5)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -129,6 +135,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が6ならStage5_Takedaまでのボタンを有効
         if (StageReload == 6)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -144,6 +151,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が7ならStageSabo_miuraまでのボタンを有効
         if (StageReload == 7)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -159,6 +167,7 @@ public class SceneSelect : MonoBehaviour
         //もし「STAGE」が8ならStage6_Takedaまでのボタンを有効
         if (StageReload == 8)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -173,6 +182,7 @@ public class SceneSelect : MonoBehaviour
         }
         if (StageReload == 9)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -185,8 +195,9 @@ public class SceneSelect : MonoBehaviour
             Stage9Button.enabled = true;
             Stage10Image.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
         }
-        if (StageReload == 9)
+        if (StageReload == 10)
         {
+            Stage0Button.Select();
             Stage0Button.enabled = true;
             Stage1Button.enabled = true;
             Stage2Button.enabled = true;
@@ -210,7 +221,7 @@ public class SceneSelect : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F2))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;

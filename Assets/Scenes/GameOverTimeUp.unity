@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7058824, g: 0.68235296, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0.29803923, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7058824, g: 0.68235296, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0.29803923, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -892,8 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ab214629cba8249b05cfb0e3861825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeupText: {fileID: 1626153706}
-  GameOverText: {fileID: 0}
 --- !u!114 &1274583400
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class OptionMagical10 : MonoBehaviour
     [SerializeField] Text OperationButtonText;
     [SerializeField] Text EndGameButtonButtonText;
     [SerializeField] Text OptionText;
+    [SerializeField] Text MouseF2Test;
     [SerializeField] Button OperationCloseAfterButton;
     void Update()
     {
@@ -28,7 +29,7 @@ public class OptionMagical10 : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F2))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -49,6 +50,7 @@ public class OptionMagical10 : MonoBehaviour
         OptionCloseButton.enabled = true;
         OptionBackgroundImage.enabled = true;
         OptionText.enabled = true;
+        MouseF2Test.enabled = true;
         VolumeControlButton.Select();
     }
      public void OnOptionCloseClicked()
@@ -66,6 +68,7 @@ public class OptionMagical10 : MonoBehaviour
         OptionCloseButton.enabled = false;
         OptionBackgroundImage.enabled = false;
         OptionText.enabled = false;
+        MouseF2Test.enabled = false;
         OperationCloseAfterButton.Select();
     }
 }
