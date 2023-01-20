@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class EndGame_Button : MonoBehaviour
+public class EndGameTitleButton : MonoBehaviour
 {
     //背景
     [SerializeField] Image EndGameWarningImage;
@@ -50,12 +51,8 @@ public class EndGame_Button : MonoBehaviour
     }
 
     public void OnEndGameSecondButtonOffClicked()
-    {//はいを押すとゲームを終了する
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;//ゲームプレイ終了
-#else
-    Application.Quit();//ゲームプレイ終了
-#endif
+    {//はいを押すとタイトルに戻る
+        FadeManager.Instance.LoadScene("Title", 0.5f);
     }
     public void OnEndGameWarningButtonOffClicked()
     {//いいえを押すとステージ選択画面に戻る
@@ -66,7 +63,7 @@ public class EndGame_Button : MonoBehaviour
         EndGameWarningCloseText.enabled = false;
         EndGameButton.enabled = false;
         EndGameImage.enabled = false;
-        EndGameText.enabled = false; 
+        EndGameText.enabled = false;
         EndGameWarningCloseSelectText.enabled = false;
         //2022/12/5追加　ボタンをキー選択させるため、試験開始ボタンを選択する
         FirstGameStartButton.Select();

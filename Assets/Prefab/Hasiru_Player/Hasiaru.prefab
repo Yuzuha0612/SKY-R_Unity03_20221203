@@ -7918,6 +7918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661831410714480236}
     m_Modifications:
+    - target: {fileID: 1197374719489162175, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1197374720496401785, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -7977,6 +7981,10 @@ PrefabInstance:
     - target: {fileID: 1197374720496401789, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
       propertyPath: m_Name
       value: TimeStoppingEffextCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197374720496401791, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}

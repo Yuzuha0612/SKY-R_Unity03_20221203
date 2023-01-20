@@ -47,7 +47,7 @@ public class Title_Scene : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F2))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
