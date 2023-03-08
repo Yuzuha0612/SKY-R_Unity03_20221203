@@ -27,6 +27,9 @@ public class Timecounte : MonoBehaviour
     AudioSource audioSource;
     //2023/1/4追加　赤色のストップウォッチのイラストをTimeImageRedにいれる
     public Image TimeImageRed;
+    //2023/2/22追加　ゲームマネージャー取得
+    private GameAdministrator gameAdministrator;
+    public GameObject Administrator;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -40,6 +43,8 @@ public class Timecounte : MonoBehaviour
         //「STAGECLASS」というキーで、Int値の「StageClass」を保存
         PlayerPrefs.SetInt("STAGECLASS", StageClass);
         PlayerPrefs.Save();
+        //2023/2/22追加　ゲームマネージャー取得
+        gameAdministrator = Administrator.GetComponent<GameAdministrator>();
     }
 
     void Update()
@@ -47,24 +52,28 @@ public class Timecounte : MonoBehaviour
 
         //2022/11/23追加 ゲーム開始判定
         //2022/11/23追加 ゲーム開始判定 全てのキー対応
-        if (isStart == false && Input.anyKey)
+        //2023/2/22追加　ゲームマネージャー判定追加
+        if (isStart == false && Input.anyKey&& gameAdministrator.GameStatus == GameAdministrator.Magical10GameStatus.Ready)
         {
             isStart = true;
             StartClickEnter.enabled = false;
+            gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.Game;
         }
-        if (isStart == true)
+        if (isStart == true )
         {
             //左右キーのどちらかが押されたとき時間を引くのを止めるそれ以外はTimedeltaTimeで時間経過 && Sabodon.GetComponent<Sabodon>().isTogeDamege
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)) &&(Sabodon. instance.isTogeDamege))
             {
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
+                gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.TimeStop;
                 //2022年12月9日追加　時間停止エフェクトをオンにする
-               // TimeStopPostProcessLayer.enabled = true;
+                // TimeStopPostProcessLayer.enabled = true;
             }
             else
             {
                 timeCount -= Time.deltaTime;
                 timeLabel.text = "TIME:" + timeCount.ToString("0.00");
+                gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.Game;
                 //2022年12月9日追加　時間停止エフェクトをオフにする
                 //TimeStopPostProcessLayer.enabled = false;
             }

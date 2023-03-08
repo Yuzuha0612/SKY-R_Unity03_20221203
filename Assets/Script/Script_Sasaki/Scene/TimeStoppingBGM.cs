@@ -9,12 +9,17 @@ public class TimeStoppingBGM : MonoBehaviour
     AudioSource audioTimeStoppingBGMSource;
     //時間停止によって音量を上げる前の音量
     public float BGMFirstVolume;
+    //2023/2/22追加　ゲームマネージャー取得
+    private GameAdministrator gameAdministrator;
+    public GameObject Administrator;
     void Start()
     {
         isStart = false;
         audioTimeStoppingBGMSource = GetComponent<AudioSource>();
         //シーン開始時に最初のBGMの音量を取得する
         BGMFirstVolume = audioTimeStoppingBGMSource.volume;
+        //2023/2/22追加　ゲームマネージャー取得
+        gameAdministrator = Administrator.GetComponent<GameAdministrator>();
     }
 
 

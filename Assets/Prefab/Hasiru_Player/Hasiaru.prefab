@@ -1291,6 +1291,7 @@ GameObject:
   - component: {fileID: 8724447520470211040}
   - component: {fileID: 8724447520470211043}
   - component: {fileID: 2892925723258403616}
+  - component: {fileID: 8955640295646181145}
   m_Layer: 6
   m_Name: Hasiaru
   m_TagString: Hasiru
@@ -1553,6 +1554,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e23930426592e4cbe866c2d6c2d570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8955640295646181145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724447520470211051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a22368f4204354e9f0ffae9b2827d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableKeyInputSeconds: 2
+  isFireDamege: 0
+  DamegeEffect: {fileID: 6279954934302408107}
 --- !u!1 &8724447520940375225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7918,6 +7934,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661831410714480236}
     m_Modifications:
+    - target: {fileID: 1197374719489162172, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
+      propertyPath: m_TagString
+      value: SiguEffect
+      objectReference: {fileID: 0}
     - target: {fileID: 1197374719489162175, guid: 3adc194e07e835f4e8cf5e369dcb3135, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2

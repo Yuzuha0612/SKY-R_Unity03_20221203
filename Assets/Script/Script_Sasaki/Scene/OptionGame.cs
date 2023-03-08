@@ -24,6 +24,15 @@ public class OptionGame : MonoBehaviour
     [SerializeField] Text OperationEscText;
     [SerializeField] Button OperationCloseAfterButton;
     private bool EscapeKeyClick;
+    //2023/2/22追加　ゲームマネージャー取得
+    private GameAdministrator gameAdministrator;
+    public GameObject Administrator;
+    bool isOption = false;
+    void Start()
+    {
+        //2023/2/22追加　ゲームマネージャー取得
+        gameAdministrator = Administrator.GetComponent<GameAdministrator>();
+    }
     void Update()
     {
         if ((Input.GetMouseButtonDown(0)) && (VolumeControlButton.enabled == true))
@@ -62,7 +71,18 @@ public class OptionGame : MonoBehaviour
                 Hasiru1.gameObject.GetComponent<Hasiru_Move>().enabled = false;
                 GameObject Camera1 = GameObject.FindGameObjectWithTag("MainCamera");
                 Camera1.gameObject.GetComponent<Timecounte>().enabled = false;
-            }
+                GameObject SiguEffect1 = GameObject.FindGameObjectWithTag("SiguEffect");
+                SiguEffect1.gameObject.GetComponent<SiguTimeStoppingParticle>().enabled = false;
+                GameObject TimeEffect1 = GameObject.FindGameObjectWithTag("TimeEffect");
+                TimeEffect1.gameObject.GetComponent<TimeStoppinEffect>().enabled = false;
+                GameObject TimeStopBGM1 = GameObject.FindGameObjectWithTag("TimeStopBGM");
+            TimeStopBGM1.gameObject.GetComponent<TimeStoppingBGM>().enabled = false;
+            GameObject TimeBGM1 = GameObject.FindGameObjectWithTag("BGM");
+            TimeBGM1.gameObject.GetComponent<TimeStopBGM>().enabled = false;
+            //ゲームステータス変更
+            gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.Option;
+            isOption = true;
+        }
             if (Input.GetKeyDown(KeyCode.F1))
             {
                 Debug.Log("オプション解除");
@@ -87,7 +107,26 @@ public class OptionGame : MonoBehaviour
                 Hasiru1.gameObject.GetComponent<Hasiru_Move>().enabled = true;
                 GameObject Camera1 = GameObject.FindGameObjectWithTag("MainCamera");
                 Camera1.gameObject.GetComponent<Timecounte>().enabled = true;
-            }
+            GameObject SiguEffect1 = GameObject.FindGameObjectWithTag("SiguEffect");
+            SiguEffect1.gameObject.GetComponent<SiguTimeStoppingParticle>().enabled = true;
+            GameObject TimeEffect1 = GameObject.FindGameObjectWithTag("TimeEffect");
+            TimeEffect1.gameObject.GetComponent<TimeStoppinEffect>().enabled = true;
+            GameObject TimeStopBGM1 = GameObject.FindGameObjectWithTag("TimeStopBGM");
+            TimeStopBGM1.gameObject.GetComponent<TimeStoppingBGM>().enabled = true;
+            GameObject TimeBGM1 = GameObject.FindGameObjectWithTag("BGM");
+            TimeBGM1.gameObject.GetComponent<TimeStopBGM>().enabled = true;
+            //ゲームステータス変更
+            //gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.Game;
+            isOption = false;
+        }
+            if(isOption == true)
+        {
+            Debug.Log("オプション変更");
+            gameAdministrator.GameStatus = GameAdministrator.Magical10GameStatus.Option;
+        } else if(isOption == false)
+        {
+            
+        }
         }
 
         /*

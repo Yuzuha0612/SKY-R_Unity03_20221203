@@ -2473,6 +2473,7 @@ MonoBehaviour:
   TimeStopPostProcessLayer: {fileID: 963194231}
   GameOverSE: {fileID: 8300000, guid: a32a720834721674dbb7b004c39fc35f, type: 3}
   TimeImageRed: {fileID: 1337688054}
+  Administrator: {fileID: 2023085574}
 --- !u!82 &963194230
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2629,6 +2630,63 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1001 &1047748150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734689439601506165, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944533439870263512, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+      propertyPath: m_Name
+      value: GameAdministrator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
 --- !u!1 &1219770656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5883,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2023085574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8944533439870263512, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
+  m_PrefabInstance: {fileID: 1047748150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2096417565
 GameObject:
   m_ObjectHideFlags: 0

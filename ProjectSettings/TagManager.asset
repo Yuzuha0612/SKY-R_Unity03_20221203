@@ -14,11 +14,17 @@ TagManager:
   - GameOverArea
   - ElevatorSwitch
   - TogeToge
+  - Administrator
+  - SiguEffect
+  - TimeEffect
+  - TimeStopBGM
+  - BGM
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessLayer
   - Water
   - UI
   - Sana

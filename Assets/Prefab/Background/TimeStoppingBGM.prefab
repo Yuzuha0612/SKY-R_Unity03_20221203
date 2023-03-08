@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8339018281302306845}
   m_Layer: 0
   m_Name: TimeStoppingBGM
-  m_TagString: Untagged
+  m_TagString: TimeStopBGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BGMFirstVolume: 0
+  Administrator: {fileID: 8944533439870263512, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
