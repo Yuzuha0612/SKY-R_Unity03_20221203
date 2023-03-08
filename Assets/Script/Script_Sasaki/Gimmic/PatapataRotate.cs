@@ -8,6 +8,7 @@ public class PatapataRotate : MonoBehaviour
     public bool isStopAbilityPatapataPropeller;
     private bool isStop = false;
     bool isStart = false;
+    private bool isOptionStop = false;
     void Start()
     {
 
@@ -28,15 +29,23 @@ public class PatapataRotate : MonoBehaviour
         {
 
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) && isStart == true)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.F8) && isStart == true && isOptionStop == true)
         {
             isStopAbilityPatapataPropeller = false;
         }
-        else
+        else if (isStart == true && isOptionStop == false)
         {
             isStopAbilityPatapataPropeller = true;
         }
-
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            isOptionStop = true;
+            isStopAbilityPatapataPropeller = false;
+        }
+        if (Input.GetKey(KeyCode.F1))
+        {
+            isOptionStop = false;
+        }
     }
     void PatapataPropellerMove()
         {

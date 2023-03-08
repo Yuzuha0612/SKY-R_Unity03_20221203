@@ -11,12 +11,18 @@ public class Elevator_ver3 : MonoBehaviour
     private Vector3 pos;
     private bool isStop = false;
     public bool isStopAbilityElevator = false;
+    private bool isOptionStop = false;
     //2022/11/27追加 ゲーム開始判定
     bool isStart = false;
+    //2023/2/22追加　ゲームマネージャー取得
+    private GameAdministrator gameAdministrator;
+    private GameObject Administrator;
 
 
     void Start()
     {
+        Administrator = GameObject.FindGameObjectWithTag("Administrator");
+        gameAdministrator = Administrator.GetComponent<GameAdministrator>();
         pos = transform.position;
         isStopAbilityElevator = false;
         isStart = false;
@@ -30,6 +36,7 @@ public class Elevator_ver3 : MonoBehaviour
         {
             isStart = true;
         }
+
         if (isStopAbilityElevator == true && isStart == true)
         {
             ElevatorMove();
@@ -38,16 +45,26 @@ public class Elevator_ver3 : MonoBehaviour
         {
 
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) && isStart == true)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.F8) && isStart == true && isOptionStop == true)
         {
             isStopAbilityElevator = false;
         }
-        else if(isStart == true)
+        else if (isStart == true && isOptionStop == false)
         {
             isStopAbilityElevator = true;
         }
 
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            isOptionStop = true;
+            isStopAbilityElevator = false;
+        }
+        if (Input.GetKey(KeyCode.F1))
+        {
+            isOptionStop = false;
+        }
     }
+    
     private void ElevatorMove()
     {
         if (isStop == false)

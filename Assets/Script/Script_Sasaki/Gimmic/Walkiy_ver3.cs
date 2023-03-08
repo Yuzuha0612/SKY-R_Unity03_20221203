@@ -11,7 +11,8 @@ public class Walkiy_ver3 : MonoBehaviour
     private bool isStop = false;
     private bool isStopAbilityRobot = false;
     //2022/11/27í«â¡ ÉQÅ[ÉÄäJénîªíË
-    bool isStart = false;
+    bool isStart = false; 
+    private bool isOptionStop = false;
     void Start()
     {
         pos = transform.position;
@@ -34,13 +35,22 @@ public class Walkiy_ver3 : MonoBehaviour
         {
 
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) && isStart == true)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.F8) && isStart == true && isOptionStop == true)
         {
             isStopAbilityRobot = false;
         }
-        else if( isStart == true)
+        else if( isStart == true && isOptionStop == false)
         {
             isStopAbilityRobot = true;
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            isOptionStop = true;
+            isStopAbilityRobot = false;
+        }
+        if (Input.GetKey(KeyCode.F1))
+        {
+            isOptionStop = false;
         }
     }
     private void RobotMove()

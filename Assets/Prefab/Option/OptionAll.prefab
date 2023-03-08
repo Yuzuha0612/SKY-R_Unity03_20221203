@@ -4004,6 +4004,7 @@ MonoBehaviour:
   MouseRevivalText: {fileID: 6518063094401559445}
   OperationEscText: {fileID: 5673385538519084291}
   OperationCloseAfterButton: {fileID: 1138558501104930457}
+  Administrator: {fileID: 8944533439870263512, guid: 5d9649211a77053458d7ff3dd2287998, type: 3}
 --- !u!1 &1138558501685808751
 GameObject:
   m_ObjectHideFlags: 0
